@@ -1,0 +1,17 @@
+/* 
+   Localizable.strings
+   iEAFIT
+
+   Created by Sergio Botero on 11/23/10.
+   Copyright 2010 Sergiobuj. All rights reserved.
+ */
+"news_title" = "Noticias";
+"map_title" = "Campus";
+"search_engine_title" = "Google";
+"ulises_title" = "ULISES";
+"ei_title" = "EInteractiva";
+
+"last_updated" = "Última actualización: %@";
+"release_to_refresh" = "Soltar para recargar...";
+"pull_down_to_refresh" = "Arrastrar para recargar...";
+"loading" = "Cargando...";

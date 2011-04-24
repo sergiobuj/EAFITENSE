@@ -7,8 +7,19 @@
 //
 
 #import "EAFITENSEAppDelegate_iPhone.h"
+#import "RSSFeed.h"
 
 @implementation EAFITENSEAppDelegate_iPhone
+
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+	RSSFeed * newFeed = [[RSSFeed alloc] initWithStyle:UITableViewStylePlain];
+	[self.window addSubview:newFeed.view];
+	[newFeed release];
+	[self.window makeKeyAndVisible];
+    return YES;
+}
 
 - (void)dealloc
 {

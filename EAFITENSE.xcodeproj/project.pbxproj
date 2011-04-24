@@ -39,6 +39,10 @@
 		A08C2FAF1364C3F200C871DF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2FAA1364C3F200C871DF /* QuartzCore.framework */; };
 		A08C2FB01364C3F200C871DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2FAB1364C3F200C871DF /* UIKit.framework */; };
 		A08C2FB21364C40D00C871DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2FB11364C40D00C871DF /* Foundation.framework */; };
+		A08C2FCF1364C82200C871DF /* 2eafit.png in Resources */ = {isa = PBXBuildFile; fileRef = A08C2FCD1364C82200C871DF /* 2eafit.png */; };
+		A08C2FD01364C82200C871DF /* eafit.png in Resources */ = {isa = PBXBuildFile; fileRef = A08C2FCE1364C82200C871DF /* eafit.png */; };
+		A08C2FD31364C82900C871DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A08C2FD11364C82900C871DF /* Localizable.strings */; };
+		A08C2FD51364C83300C871DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A08C2FD11364C82900C871DF /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +104,10 @@
 		A08C2FAA1364C3F200C871DF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A08C2FAB1364C3F200C871DF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A08C2FB11364C40D00C871DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A08C2FCD1364C82200C871DF /* 2eafit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2eafit.png; sourceTree = "<group>"; };
+		A08C2FCE1364C82200C871DF /* eafit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eafit.png; sourceTree = "<group>"; };
+		A08C2FD21364C82900C871DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = EAFITENSE/en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A08C2FD41364C83300C871DF /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = EAFITENSE/es.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +137,8 @@
 		A08C2F1C1364C0EF00C871DF = {
 			isa = PBXGroup;
 			children = (
+				A08C2FD11364C82900C871DF /* Localizable.strings */,
+				A08C2FCC1364C82200C871DF /* Images */,
 				A08C2F731364C2B800C871DF /* EGOTableViewPullRefresh */,
 				A08C2F841364C2B800C871DF /* Shared */,
 				A08C2F311364C0EF00C871DF /* EAFITENSE */,
@@ -294,6 +304,16 @@
 			path = EAFITENSE/Shared;
 			sourceTree = "<group>";
 		};
+		A08C2FCC1364C82200C871DF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A08C2FCD1364C82200C871DF /* 2eafit.png */,
+				A08C2FCE1364C82200C871DF /* eafit.png */,
+			);
+			name = Images;
+			path = EAFITENSE/Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -347,6 +367,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				es,
 			);
 			mainGroup = A08C2F1C1364C0EF00C871DF;
 			productRefGroup = A08C2F281364C0EF00C871DF /* Products */;
@@ -376,6 +397,10 @@
 				A08C2F991364C2B900C871DF /* grayArrow@2x.png in Resources */,
 				A08C2F9A1364C2B900C871DF /* whiteArrow.png in Resources */,
 				A08C2F9B1364C2B900C871DF /* whiteArrow@2x.png in Resources */,
+				A08C2FCF1364C82200C871DF /* 2eafit.png in Resources */,
+				A08C2FD01364C82200C871DF /* eafit.png in Resources */,
+				A08C2FD31364C82900C871DF /* Localizable.strings in Resources */,
+				A08C2FD51364C83300C871DF /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +499,15 @@
 				A08C2F5A1364C0F000C871DF /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A08C2FD11364C82900C871DF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A08C2FD21364C82900C871DF /* en */,
+				A08C2FD41364C83300C871DF /* es */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -608,6 +642,7 @@
 				A08C2F651364C0F000C871DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A08C2F661364C0F000C871DF /* Build configuration list for PBXNativeTarget "EAFITENSETests" */ = {
 			isa = XCConfigurationList;
@@ -616,6 +651,7 @@
 				A08C2F681364C0F000C871DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

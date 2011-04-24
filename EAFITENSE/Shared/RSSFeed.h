@@ -7,13 +7,14 @@
 //
 #import "EGORefreshTableHeaderView.h"
 #import <UIKit/UIKit.h>
+#import "SBXMLParser.h"
 
 
 @interface RSSFeed : UITableViewController <SBParserDelegate>{
 	EGORefreshTableHeaderView *refreshHeaderView;
 	BOOL _reloading;
 	NSOperationQueue *xmlQueue;
-//	UIActivityIndicatorView *spinner;
+	//	UIActivityIndicatorView *spinner;
 	SBXMLParser * xmlParser;
 	NSMutableArray *entries;
 	NSString * urlFeed;
