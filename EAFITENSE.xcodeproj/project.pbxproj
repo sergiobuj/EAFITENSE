@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A08C2F2C1364C0EF00C871DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2F2B1364C0EF00C871DF /* UIKit.framework */; };
+		A08C2F2E1364C0EF00C871DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2F2D1364C0EF00C871DF /* Foundation.framework */; };
+		A08C2F301364C0EF00C871DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2F2F1364C0EF00C871DF /* CoreGraphics.framework */; };
+		A08C2F361364C0EF00C871DF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A08C2F341364C0EF00C871DF /* InfoPlist.strings */; };
+		A08C2F391364C0EF00C871DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F381364C0EF00C871DF /* main.m */; };
+		A08C2F3C1364C0EF00C871DF /* EAFITENSEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F3B1364C0EF00C871DF /* EAFITENSEAppDelegate.m */; };
+		A08C2F401364C0EF00C871DF /* EAFITENSEAppDelegate_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F3F1364C0EF00C871DF /* EAFITENSEAppDelegate_iPhone.m */; };
+		A08C2F431364C0EF00C871DF /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08C2F411364C0EF00C871DF /* MainWindow_iPhone.xib */; };
+		A08C2F471364C0EF00C871DF /* EAFITENSEAppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F461364C0EF00C871DF /* EAFITENSEAppDelegate_iPad.m */; };
+		A08C2F4A1364C0EF00C871DF /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08C2F481364C0EF00C871DF /* MainWindow_iPad.xib */; };
+		A08C2F511364C0F000C871DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2F2B1364C0EF00C871DF /* UIKit.framework */; };
+		A08C2F521364C0F000C871DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2F2D1364C0EF00C871DF /* Foundation.framework */; };
+		A08C2F531364C0F000C871DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2F2F1364C0EF00C871DF /* CoreGraphics.framework */; };
+		A08C2F5B1364C0F000C871DF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A08C2F591364C0F000C871DF /* InfoPlist.strings */; };
+		A08C2F5E1364C0F000C871DF /* EAFITENSETests.h in Resources */ = {isa = PBXBuildFile; fileRef = A08C2F5D1364C0F000C871DF /* EAFITENSETests.h */; };
+		A08C2F601364C0F000C871DF /* EAFITENSETests.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F5F1364C0F000C871DF /* EAFITENSETests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A08C2F541364C0F000C871DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A08C2F1E1364C0EF00C871DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A08C2F261364C0EF00C871DF;
+			remoteInfo = EAFITENSE;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A08C2F271364C0EF00C871DF /* EAFITENSE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EAFITENSE.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A08C2F2B1364C0EF00C871DF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A08C2F2D1364C0EF00C871DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A08C2F2F1364C0EF00C871DF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A08C2F331364C0EF00C871DF /* EAFITENSE-Info.plist */ = {isa = PBXFileReference; path = "EAFITENSE-Info.plist"; sourceTree = "<group>"; };
+		A08C2F351364C0EF00C871DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A08C2F371364C0EF00C871DF /* EAFITENSE-Prefix.pch */ = {isa = PBXFileReference; path = "EAFITENSE-Prefix.pch"; sourceTree = "<group>"; };
+		A08C2F381364C0EF00C871DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A08C2F3A1364C0EF00C871DF /* EAFITENSEAppDelegate.h */ = {isa = PBXFileReference; path = EAFITENSEAppDelegate.h; sourceTree = "<group>"; };
+		A08C2F3B1364C0EF00C871DF /* EAFITENSEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EAFITENSEAppDelegate.m; sourceTree = "<group>"; };
+		A08C2F3E1364C0EF00C871DF /* EAFITENSEAppDelegate_iPhone.h */ = {isa = PBXFileReference; name = EAFITENSEAppDelegate_iPhone.h; path = iPhone/EAFITENSEAppDelegate_iPhone.h; sourceTree = "<group>"; };
+		A08C2F3F1364C0EF00C871DF /* EAFITENSEAppDelegate_iPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = EAFITENSEAppDelegate_iPhone.m; path = iPhone/EAFITENSEAppDelegate_iPhone.m; sourceTree = "<group>"; };
+		A08C2F421364C0EF00C871DF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPhone/en.lproj/MainWindow_iPhone.xib; sourceTree = "<group>"; };
+		A08C2F451364C0EF00C871DF /* EAFITENSEAppDelegate_iPad.h */ = {isa = PBXFileReference; name = EAFITENSEAppDelegate_iPad.h; path = iPad/EAFITENSEAppDelegate_iPad.h; sourceTree = "<group>"; };
+		A08C2F461364C0EF00C871DF /* EAFITENSEAppDelegate_iPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = EAFITENSEAppDelegate_iPad.m; path = iPad/EAFITENSEAppDelegate_iPad.m; sourceTree = "<group>"; };
+		A08C2F491364C0EF00C871DF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
+		A08C2F501364C0F000C871DF /* EAFITENSETests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EAFITENSETests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A08C2F581364C0F000C871DF /* EAFITENSETests-Info.plist */ = {isa = PBXFileReference; path = "EAFITENSETests-Info.plist"; sourceTree = "<group>"; };
+		A08C2F5A1364C0F000C871DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A08C2F5C1364C0F000C871DF /* EAFITENSETests-Prefix.pch */ = {isa = PBXFileReference; path = "EAFITENSETests-Prefix.pch"; sourceTree = "<group>"; };
+		A08C2F5D1364C0F000C871DF /* EAFITENSETests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EAFITENSETests.h; sourceTree = "<group>"; };
+		A08C2F5F1364C0F000C871DF /* EAFITENSETests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EAFITENSETests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A08C2F241364C0EF00C871DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A08C2F2C1364C0EF00C871DF /* UIKit.framework in Frameworks */,
+				A08C2F2E1364C0EF00C871DF /* Foundation.framework in Frameworks */,
+				A08C2F301364C0EF00C871DF /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A08C2F4C1364C0F000C871DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A08C2F511364C0F000C871DF /* UIKit.framework in Frameworks */,
+				A08C2F521364C0F000C871DF /* Foundation.framework in Frameworks */,
+				A08C2F531364C0F000C871DF /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A08C2F1C1364C0EF00C871DF = {
+			isa = PBXGroup;
+			children = (
+				A08C2F311364C0EF00C871DF /* EAFITENSE */,
+				A08C2F561364C0F000C871DF /* EAFITENSETests */,
+				A08C2F2A1364C0EF00C871DF /* Frameworks */,
+				A08C2F281364C0EF00C871DF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A08C2F281364C0EF00C871DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A08C2F271364C0EF00C871DF /* EAFITENSE.app */,
+				A08C2F501364C0F000C871DF /* EAFITENSETests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A08C2F2A1364C0EF00C871DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A08C2F2B1364C0EF00C871DF /* UIKit.framework */,
+				A08C2F2D1364C0EF00C871DF /* Foundation.framework */,
+				A08C2F2F1364C0EF00C871DF /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A08C2F311364C0EF00C871DF /* EAFITENSE */ = {
+			isa = PBXGroup;
+			children = (
+				A08C2F3A1364C0EF00C871DF /* EAFITENSEAppDelegate.h */,
+				A08C2F3B1364C0EF00C871DF /* EAFITENSEAppDelegate.m */,
+				A08C2F3D1364C0EF00C871DF /* iPhone */,
+				A08C2F441364C0EF00C871DF /* iPad */,
+				A08C2F321364C0EF00C871DF /* Supporting Files */,
+			);
+			path = EAFITENSE;
+			sourceTree = "<group>";
+		};
+		A08C2F321364C0EF00C871DF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A08C2F331364C0EF00C871DF /* EAFITENSE-Info.plist */,
+				A08C2F341364C0EF00C871DF /* InfoPlist.strings */,
+				A08C2F371364C0EF00C871DF /* EAFITENSE-Prefix.pch */,
+				A08C2F381364C0EF00C871DF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A08C2F3D1364C0EF00C871DF /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				A08C2F3E1364C0EF00C871DF /* EAFITENSEAppDelegate_iPhone.h */,
+				A08C2F3F1364C0EF00C871DF /* EAFITENSEAppDelegate_iPhone.m */,
+				A08C2F411364C0EF00C871DF /* MainWindow_iPhone.xib */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		A08C2F441364C0EF00C871DF /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				A08C2F451364C0EF00C871DF /* EAFITENSEAppDelegate_iPad.h */,
+				A08C2F461364C0EF00C871DF /* EAFITENSEAppDelegate_iPad.m */,
+				A08C2F481364C0EF00C871DF /* MainWindow_iPad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		A08C2F561364C0F000C871DF /* EAFITENSETests */ = {
+			isa = PBXGroup;
+			children = (
+				A08C2F5D1364C0F000C871DF /* EAFITENSETests.h */,
+				A08C2F5F1364C0F000C871DF /* EAFITENSETests.m */,
+				A08C2F571364C0F000C871DF /* Supporting Files */,
+			);
+			path = EAFITENSETests;
+			sourceTree = "<group>";
+		};
+		A08C2F571364C0F000C871DF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A08C2F581364C0F000C871DF /* EAFITENSETests-Info.plist */,
+				A08C2F591364C0F000C871DF /* InfoPlist.strings */,
+				A08C2F5C1364C0F000C871DF /* EAFITENSETests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A08C2F261364C0EF00C871DF /* EAFITENSE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A08C2F631364C0F000C871DF /* Build configuration list for PBXNativeTarget "EAFITENSE" */;
+			buildPhases = (
+				A08C2F231364C0EF00C871DF /* Sources */,
+				A08C2F241364C0EF00C871DF /* Frameworks */,
+				A08C2F251364C0EF00C871DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EAFITENSE;
+			productName = EAFITENSE;
+			productReference = A08C2F271364C0EF00C871DF /* EAFITENSE.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A08C2F4F1364C0F000C871DF /* EAFITENSETests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A08C2F661364C0F000C871DF /* Build configuration list for PBXNativeTarget "EAFITENSETests" */;
+			buildPhases = (
+				A08C2F4B1364C0F000C871DF /* Sources */,
+				A08C2F4C1364C0F000C871DF /* Frameworks */,
+				A08C2F4D1364C0F000C871DF /* Resources */,
+				A08C2F4E1364C0F000C871DF /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A08C2F551364C0F000C871DF /* PBXTargetDependency */,
+			);
+			name = EAFITENSETests;
+			productName = EAFITENSETests;
+			productReference = A08C2F501364C0F000C871DF /* EAFITENSETests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A08C2F1E1364C0EF00C871DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = Sergiobuj;
+			};
+			buildConfigurationList = A08C2F211364C0EF00C871DF /* Build configuration list for PBXProject "EAFITENSE" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A08C2F1C1364C0EF00C871DF;
+			productRefGroup = A08C2F281364C0EF00C871DF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A08C2F261364C0EF00C871DF /* EAFITENSE */,
+				A08C2F4F1364C0F000C871DF /* EAFITENSETests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A08C2F251364C0EF00C871DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A08C2F361364C0EF00C871DF /* InfoPlist.strings in Resources */,
+				A08C2F431364C0EF00C871DF /* MainWindow_iPhone.xib in Resources */,
+				A08C2F4A1364C0EF00C871DF /* MainWindow_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A08C2F4D1364C0F000C871DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A08C2F5B1364C0F000C871DF /* InfoPlist.strings in Resources */,
+				A08C2F5E1364C0F000C871DF /* EAFITENSETests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A08C2F4E1364C0F000C871DF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A08C2F231364C0EF00C871DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A08C2F391364C0EF00C871DF /* main.m in Sources */,
+				A08C2F3C1364C0EF00C871DF /* EAFITENSEAppDelegate.m in Sources */,
+				A08C2F401364C0EF00C871DF /* EAFITENSEAppDelegate_iPhone.m in Sources */,
+				A08C2F471364C0EF00C871DF /* EAFITENSEAppDelegate_iPad.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A08C2F4B1364C0F000C871DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A08C2F601364C0F000C871DF /* EAFITENSETests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A08C2F551364C0F000C871DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A08C2F261364C0EF00C871DF /* EAFITENSE */;
+			targetProxy = A08C2F541364C0F000C871DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A08C2F341364C0EF00C871DF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A08C2F351364C0EF00C871DF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A08C2F411364C0EF00C871DF /* MainWindow_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A08C2F421364C0EF00C871DF /* en */,
+			);
+			name = MainWindow_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		A08C2F481364C0EF00C871DF /* MainWindow_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A08C2F491364C0EF00C871DF /* en */,
+			);
+			name = MainWindow_iPad.xib;
+			sourceTree = "<group>";
+		};
+		A08C2F591364C0F000C871DF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A08C2F5A1364C0F000C871DF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A08C2F611364C0F000C871DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A08C2F621364C0F000C871DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A08C2F641364C0F000C871DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EAFITENSE/EAFITENSE-Prefix.pch";
+				INFOPLIST_FILE = "EAFITENSE/EAFITENSE-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A08C2F651364C0F000C871DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EAFITENSE/EAFITENSE-Prefix.pch";
+				INFOPLIST_FILE = "EAFITENSE/EAFITENSE-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A08C2F671364C0F000C871DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EAFITENSE.app/EAFITENSE";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EAFITENSETests/EAFITENSETests-Prefix.pch";
+				INFOPLIST_FILE = "EAFITENSETests/EAFITENSETests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		A08C2F681364C0F000C871DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EAFITENSE.app/EAFITENSE";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EAFITENSETests/EAFITENSETests-Prefix.pch";
+				INFOPLIST_FILE = "EAFITENSETests/EAFITENSETests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A08C2F211364C0EF00C871DF /* Build configuration list for PBXProject "EAFITENSE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A08C2F611364C0F000C871DF /* Debug */,
+				A08C2F621364C0F000C871DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A08C2F631364C0F000C871DF /* Build configuration list for PBXNativeTarget "EAFITENSE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A08C2F641364C0F000C871DF /* Debug */,
+				A08C2F651364C0F000C871DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A08C2F661364C0F000C871DF /* Build configuration list for PBXNativeTarget "EAFITENSETests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A08C2F671364C0F000C871DF /* Debug */,
+				A08C2F681364C0F000C871DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A08C2F1E1364C0EF00C871DF /* Project object */;
+}
