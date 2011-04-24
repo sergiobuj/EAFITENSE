@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A08C2F2C1364C0EF00C871DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2F2B1364C0EF00C871DF /* UIKit.framework */; };
-		A08C2F2E1364C0EF00C871DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2F2D1364C0EF00C871DF /* Foundation.framework */; };
-		A08C2F301364C0EF00C871DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2F2F1364C0EF00C871DF /* CoreGraphics.framework */; };
 		A08C2F361364C0EF00C871DF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A08C2F341364C0EF00C871DF /* InfoPlist.strings */; };
 		A08C2F391364C0EF00C871DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F381364C0EF00C871DF /* main.m */; };
 		A08C2F3C1364C0EF00C871DF /* EAFITENSEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F3B1364C0EF00C871DF /* EAFITENSEAppDelegate.m */; };
@@ -17,12 +14,31 @@
 		A08C2F431364C0EF00C871DF /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08C2F411364C0EF00C871DF /* MainWindow_iPhone.xib */; };
 		A08C2F471364C0EF00C871DF /* EAFITENSEAppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F461364C0EF00C871DF /* EAFITENSEAppDelegate_iPad.m */; };
 		A08C2F4A1364C0EF00C871DF /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08C2F481364C0EF00C871DF /* MainWindow_iPad.xib */; };
-		A08C2F511364C0F000C871DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2F2B1364C0EF00C871DF /* UIKit.framework */; };
-		A08C2F521364C0F000C871DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2F2D1364C0EF00C871DF /* Foundation.framework */; };
-		A08C2F531364C0F000C871DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2F2F1364C0EF00C871DF /* CoreGraphics.framework */; };
 		A08C2F5B1364C0F000C871DF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A08C2F591364C0F000C871DF /* InfoPlist.strings */; };
 		A08C2F5E1364C0F000C871DF /* EAFITENSETests.h in Resources */ = {isa = PBXBuildFile; fileRef = A08C2F5D1364C0F000C871DF /* EAFITENSETests.h */; };
 		A08C2F601364C0F000C871DF /* EAFITENSETests.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F5F1364C0F000C871DF /* EAFITENSETests.m */; };
+		A08C2F911364C2B900C871DF /* Customization.plist in Resources */ = {isa = PBXBuildFile; fileRef = A08C2F721364C2B800C871DF /* Customization.plist */; };
+		A08C2F921364C2B900C871DF /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F771364C2B800C871DF /* RootViewController.m */; };
+		A08C2F931364C2B900C871DF /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F7A1364C2B800C871DF /* EGORefreshTableHeaderView.m */; };
+		A08C2F941364C2B900C871DF /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = A08C2F7C1364C2B800C871DF /* blackArrow.png */; };
+		A08C2F951364C2B900C871DF /* blackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A08C2F7D1364C2B800C871DF /* blackArrow@2x.png */; };
+		A08C2F961364C2B900C871DF /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = A08C2F7E1364C2B800C871DF /* blueArrow.png */; };
+		A08C2F971364C2B900C871DF /* blueArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A08C2F7F1364C2B800C871DF /* blueArrow@2x.png */; };
+		A08C2F981364C2B900C871DF /* grayArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = A08C2F801364C2B800C871DF /* grayArrow.png */; };
+		A08C2F991364C2B900C871DF /* grayArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A08C2F811364C2B800C871DF /* grayArrow@2x.png */; };
+		A08C2F9A1364C2B900C871DF /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = A08C2F821364C2B800C871DF /* whiteArrow.png */; };
+		A08C2F9B1364C2B900C871DF /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A08C2F831364C2B800C871DF /* whiteArrow@2x.png */; };
+		A08C2F9C1364C2B900C871DF /* CampusMap.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F861364C2B800C871DF /* CampusMap.m */; };
+		A08C2F9D1364C2B900C871DF /* MapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F881364C2B800C871DF /* MapPoint.m */; };
+		A08C2F9E1364C2B900C871DF /* PlistReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F8A1364C2B800C871DF /* PlistReader.m */; };
+		A08C2F9F1364C2B900C871DF /* RSSFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F8C1364C2B800C871DF /* RSSFeed.m */; };
+		A08C2FA01364C2B900C871DF /* SBXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F8E1364C2B800C871DF /* SBXMLParser.m */; };
+		A08C2FAC1364C3F200C871DF /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2FA71364C3F100C871DF /* CoreFoundation.framework */; };
+		A08C2FAD1364C3F200C871DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2FA81364C3F100C871DF /* CoreGraphics.framework */; };
+		A08C2FAE1364C3F200C871DF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2FA91364C3F100C871DF /* MapKit.framework */; };
+		A08C2FAF1364C3F200C871DF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2FAA1364C3F200C871DF /* QuartzCore.framework */; };
+		A08C2FB01364C3F200C871DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2FAB1364C3F200C871DF /* UIKit.framework */; };
+		A08C2FB21364C40D00C871DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2FB11364C40D00C871DF /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,27 +53,53 @@
 
 /* Begin PBXFileReference section */
 		A08C2F271364C0EF00C871DF /* EAFITENSE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EAFITENSE.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A08C2F2B1364C0EF00C871DF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		A08C2F2D1364C0EF00C871DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		A08C2F2F1364C0EF00C871DF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A08C2F331364C0EF00C871DF /* EAFITENSE-Info.plist */ = {isa = PBXFileReference; path = "EAFITENSE-Info.plist"; sourceTree = "<group>"; };
+		A08C2F331364C0EF00C871DF /* EAFITENSE-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EAFITENSE-Info.plist"; sourceTree = "<group>"; };
 		A08C2F351364C0EF00C871DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A08C2F371364C0EF00C871DF /* EAFITENSE-Prefix.pch */ = {isa = PBXFileReference; path = "EAFITENSE-Prefix.pch"; sourceTree = "<group>"; };
+		A08C2F371364C0EF00C871DF /* EAFITENSE-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EAFITENSE-Prefix.pch"; sourceTree = "<group>"; };
 		A08C2F381364C0EF00C871DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A08C2F3A1364C0EF00C871DF /* EAFITENSEAppDelegate.h */ = {isa = PBXFileReference; path = EAFITENSEAppDelegate.h; sourceTree = "<group>"; };
+		A08C2F3A1364C0EF00C871DF /* EAFITENSEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EAFITENSEAppDelegate.h; sourceTree = "<group>"; };
 		A08C2F3B1364C0EF00C871DF /* EAFITENSEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EAFITENSEAppDelegate.m; sourceTree = "<group>"; };
-		A08C2F3E1364C0EF00C871DF /* EAFITENSEAppDelegate_iPhone.h */ = {isa = PBXFileReference; name = EAFITENSEAppDelegate_iPhone.h; path = iPhone/EAFITENSEAppDelegate_iPhone.h; sourceTree = "<group>"; };
+		A08C2F3E1364C0EF00C871DF /* EAFITENSEAppDelegate_iPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EAFITENSEAppDelegate_iPhone.h; path = iPhone/EAFITENSEAppDelegate_iPhone.h; sourceTree = "<group>"; };
 		A08C2F3F1364C0EF00C871DF /* EAFITENSEAppDelegate_iPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = EAFITENSEAppDelegate_iPhone.m; path = iPhone/EAFITENSEAppDelegate_iPhone.m; sourceTree = "<group>"; };
 		A08C2F421364C0EF00C871DF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPhone/en.lproj/MainWindow_iPhone.xib; sourceTree = "<group>"; };
-		A08C2F451364C0EF00C871DF /* EAFITENSEAppDelegate_iPad.h */ = {isa = PBXFileReference; name = EAFITENSEAppDelegate_iPad.h; path = iPad/EAFITENSEAppDelegate_iPad.h; sourceTree = "<group>"; };
+		A08C2F451364C0EF00C871DF /* EAFITENSEAppDelegate_iPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EAFITENSEAppDelegate_iPad.h; path = iPad/EAFITENSEAppDelegate_iPad.h; sourceTree = "<group>"; };
 		A08C2F461364C0EF00C871DF /* EAFITENSEAppDelegate_iPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = EAFITENSEAppDelegate_iPad.m; path = iPad/EAFITENSEAppDelegate_iPad.m; sourceTree = "<group>"; };
 		A08C2F491364C0EF00C871DF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
 		A08C2F501364C0F000C871DF /* EAFITENSETests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EAFITENSETests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A08C2F581364C0F000C871DF /* EAFITENSETests-Info.plist */ = {isa = PBXFileReference; path = "EAFITENSETests-Info.plist"; sourceTree = "<group>"; };
+		A08C2F581364C0F000C871DF /* EAFITENSETests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EAFITENSETests-Info.plist"; sourceTree = "<group>"; };
 		A08C2F5A1364C0F000C871DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A08C2F5C1364C0F000C871DF /* EAFITENSETests-Prefix.pch */ = {isa = PBXFileReference; path = "EAFITENSETests-Prefix.pch"; sourceTree = "<group>"; };
+		A08C2F5C1364C0F000C871DF /* EAFITENSETests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EAFITENSETests-Prefix.pch"; sourceTree = "<group>"; };
 		A08C2F5D1364C0F000C871DF /* EAFITENSETests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EAFITENSETests.h; sourceTree = "<group>"; };
 		A08C2F5F1364C0F000C871DF /* EAFITENSETests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EAFITENSETests.m; sourceTree = "<group>"; };
+		A08C2F721364C2B800C871DF /* Customization.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Customization.plist; path = ../Customization.plist; sourceTree = "<group>"; };
+		A08C2F761364C2B800C871DF /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		A08C2F771364C2B800C871DF /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		A08C2F791364C2B800C871DF /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
+		A08C2F7A1364C2B800C871DF /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		A08C2F7C1364C2B800C871DF /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackArrow.png; sourceTree = "<group>"; };
+		A08C2F7D1364C2B800C871DF /* blackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackArrow@2x.png"; sourceTree = "<group>"; };
+		A08C2F7E1364C2B800C871DF /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
+		A08C2F7F1364C2B800C871DF /* blueArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueArrow@2x.png"; sourceTree = "<group>"; };
+		A08C2F801364C2B800C871DF /* grayArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayArrow.png; sourceTree = "<group>"; };
+		A08C2F811364C2B800C871DF /* grayArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grayArrow@2x.png"; sourceTree = "<group>"; };
+		A08C2F821364C2B800C871DF /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
+		A08C2F831364C2B800C871DF /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
+		A08C2F851364C2B800C871DF /* CampusMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampusMap.h; sourceTree = "<group>"; };
+		A08C2F861364C2B800C871DF /* CampusMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampusMap.m; sourceTree = "<group>"; };
+		A08C2F871364C2B800C871DF /* MapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPoint.h; sourceTree = "<group>"; };
+		A08C2F881364C2B800C871DF /* MapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPoint.m; sourceTree = "<group>"; };
+		A08C2F891364C2B800C871DF /* PlistReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistReader.h; sourceTree = "<group>"; };
+		A08C2F8A1364C2B800C871DF /* PlistReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistReader.m; sourceTree = "<group>"; };
+		A08C2F8B1364C2B800C871DF /* RSSFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSFeed.h; sourceTree = "<group>"; };
+		A08C2F8C1364C2B800C871DF /* RSSFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSFeed.m; sourceTree = "<group>"; };
+		A08C2F8D1364C2B800C871DF /* SBXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBXMLParser.h; sourceTree = "<group>"; };
+		A08C2F8E1364C2B800C871DF /* SBXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBXMLParser.m; sourceTree = "<group>"; };
+		A08C2FA71364C3F100C871DF /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		A08C2FA81364C3F100C871DF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A08C2FA91364C3F100C871DF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A08C2FAA1364C3F200C871DF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A08C2FAB1364C3F200C871DF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A08C2FB11364C40D00C871DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +107,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A08C2F2C1364C0EF00C871DF /* UIKit.framework in Frameworks */,
-				A08C2F2E1364C0EF00C871DF /* Foundation.framework in Frameworks */,
-				A08C2F301364C0EF00C871DF /* CoreGraphics.framework in Frameworks */,
+				A08C2FB21364C40D00C871DF /* Foundation.framework in Frameworks */,
+				A08C2FAC1364C3F200C871DF /* CoreFoundation.framework in Frameworks */,
+				A08C2FAD1364C3F200C871DF /* CoreGraphics.framework in Frameworks */,
+				A08C2FAE1364C3F200C871DF /* MapKit.framework in Frameworks */,
+				A08C2FAF1364C3F200C871DF /* QuartzCore.framework in Frameworks */,
+				A08C2FB01364C3F200C871DF /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,9 +120,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A08C2F511364C0F000C871DF /* UIKit.framework in Frameworks */,
-				A08C2F521364C0F000C871DF /* Foundation.framework in Frameworks */,
-				A08C2F531364C0F000C871DF /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +129,8 @@
 		A08C2F1C1364C0EF00C871DF = {
 			isa = PBXGroup;
 			children = (
+				A08C2F731364C2B800C871DF /* EGOTableViewPullRefresh */,
+				A08C2F841364C2B800C871DF /* Shared */,
 				A08C2F311364C0EF00C871DF /* EAFITENSE */,
 				A08C2F561364C0F000C871DF /* EAFITENSETests */,
 				A08C2F2A1364C0EF00C871DF /* Frameworks */,
@@ -106,9 +150,12 @@
 		A08C2F2A1364C0EF00C871DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A08C2F2B1364C0EF00C871DF /* UIKit.framework */,
-				A08C2F2D1364C0EF00C871DF /* Foundation.framework */,
-				A08C2F2F1364C0EF00C871DF /* CoreGraphics.framework */,
+				A08C2FB11364C40D00C871DF /* Foundation.framework */,
+				A08C2FA71364C3F100C871DF /* CoreFoundation.framework */,
+				A08C2FA81364C3F100C871DF /* CoreGraphics.framework */,
+				A08C2FA91364C3F100C871DF /* MapKit.framework */,
+				A08C2FAA1364C3F200C871DF /* QuartzCore.framework */,
+				A08C2FAB1364C3F200C871DF /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -174,6 +221,77 @@
 				A08C2F5C1364C0F000C871DF /* EAFITENSETests-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A08C2F731364C2B800C871DF /* EGOTableViewPullRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				A08C2F741364C2B800C871DF /* Classes */,
+				A08C2F7B1364C2B800C871DF /* Resources */,
+			);
+			name = EGOTableViewPullRefresh;
+			path = EAFITENSE/EGOTableViewPullRefresh;
+			sourceTree = "<group>";
+		};
+		A08C2F741364C2B800C871DF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A08C2F751364C2B800C871DF /* Controller */,
+				A08C2F781364C2B800C871DF /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A08C2F751364C2B800C871DF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A08C2F761364C2B800C871DF /* RootViewController.h */,
+				A08C2F771364C2B800C871DF /* RootViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A08C2F781364C2B800C871DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A08C2F791364C2B800C871DF /* EGORefreshTableHeaderView.h */,
+				A08C2F7A1364C2B800C871DF /* EGORefreshTableHeaderView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A08C2F7B1364C2B800C871DF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A08C2F7C1364C2B800C871DF /* blackArrow.png */,
+				A08C2F7D1364C2B800C871DF /* blackArrow@2x.png */,
+				A08C2F7E1364C2B800C871DF /* blueArrow.png */,
+				A08C2F7F1364C2B800C871DF /* blueArrow@2x.png */,
+				A08C2F801364C2B800C871DF /* grayArrow.png */,
+				A08C2F811364C2B800C871DF /* grayArrow@2x.png */,
+				A08C2F821364C2B800C871DF /* whiteArrow.png */,
+				A08C2F831364C2B800C871DF /* whiteArrow@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A08C2F841364C2B800C871DF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A08C2F721364C2B800C871DF /* Customization.plist */,
+				A08C2F851364C2B800C871DF /* CampusMap.h */,
+				A08C2F861364C2B800C871DF /* CampusMap.m */,
+				A08C2F871364C2B800C871DF /* MapPoint.h */,
+				A08C2F881364C2B800C871DF /* MapPoint.m */,
+				A08C2F891364C2B800C871DF /* PlistReader.h */,
+				A08C2F8A1364C2B800C871DF /* PlistReader.m */,
+				A08C2F8B1364C2B800C871DF /* RSSFeed.h */,
+				A08C2F8C1364C2B800C871DF /* RSSFeed.m */,
+				A08C2F8D1364C2B800C871DF /* SBXMLParser.h */,
+				A08C2F8E1364C2B800C871DF /* SBXMLParser.m */,
+			);
+			name = Shared;
+			path = EAFITENSE/Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +367,15 @@
 				A08C2F361364C0EF00C871DF /* InfoPlist.strings in Resources */,
 				A08C2F431364C0EF00C871DF /* MainWindow_iPhone.xib in Resources */,
 				A08C2F4A1364C0EF00C871DF /* MainWindow_iPad.xib in Resources */,
+				A08C2F911364C2B900C871DF /* Customization.plist in Resources */,
+				A08C2F941364C2B900C871DF /* blackArrow.png in Resources */,
+				A08C2F951364C2B900C871DF /* blackArrow@2x.png in Resources */,
+				A08C2F961364C2B900C871DF /* blueArrow.png in Resources */,
+				A08C2F971364C2B900C871DF /* blueArrow@2x.png in Resources */,
+				A08C2F981364C2B900C871DF /* grayArrow.png in Resources */,
+				A08C2F991364C2B900C871DF /* grayArrow@2x.png in Resources */,
+				A08C2F9A1364C2B900C871DF /* whiteArrow.png in Resources */,
+				A08C2F9B1364C2B900C871DF /* whiteArrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +415,13 @@
 				A08C2F3C1364C0EF00C871DF /* EAFITENSEAppDelegate.m in Sources */,
 				A08C2F401364C0EF00C871DF /* EAFITENSEAppDelegate_iPhone.m in Sources */,
 				A08C2F471364C0EF00C871DF /* EAFITENSEAppDelegate_iPad.m in Sources */,
+				A08C2F921364C2B900C871DF /* RootViewController.m in Sources */,
+				A08C2F931364C2B900C871DF /* EGORefreshTableHeaderView.m in Sources */,
+				A08C2F9C1364C2B900C871DF /* CampusMap.m in Sources */,
+				A08C2F9D1364C2B900C871DF /* MapPoint.m in Sources */,
+				A08C2F9E1364C2B900C871DF /* PlistReader.m in Sources */,
+				A08C2F9F1364C2B900C871DF /* RSSFeed.m in Sources */,
+				A08C2FA01364C2B900C871DF /* SBXMLParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +521,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EAFITENSE/EAFITENSE-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "EAFITENSE/EAFITENSE-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -400,6 +536,8 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EAFITENSE/EAFITENSE-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "EAFITENSE/EAFITENSE-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
