@@ -26,8 +26,9 @@
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
+	[self setTitle:NSLocalizedString(@"map_title", @"")];
 	campusMapView = [[MKMapView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
-	[campusMapView setMapType:MKMapTypeSatellite];
+	[campusMapView setMapType:MKMapTypeStandard];
 	[campusMapView setDelegate:self];
 
 	
@@ -90,9 +91,10 @@
 		[sitePoints addObject:pin];
 		
 		[pin release];
-
-
 	}
+	
+	///NSLog(@"number of pins %d",[sitePoints count]);
+	
 
 	[campusMapView addAnnotations:sitePoints];
 
@@ -114,10 +116,10 @@
 
 - (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
 
-//[[UIScreen mainScreen] scale]
+	[[UIScreen mainScreen] scale];
 	
-//	0.001093 0.000846
-/*if ([campusMapView region].span.latitudeDelta <=  0.005331 || [campusMapView region].span.longitudeDelta <=  0.004125) {
+/*/	0.001093 0.000846
+if ([campusMapView region].span.latitudeDelta <=  0.005331 || [campusMapView region].span.longitudeDelta <=  0.004125) {
 		
 		MKCoordinateRegion region = [campusMapView region];
 		region.span = MKCoordinateSpanMake(0.001117 ,0.000865);

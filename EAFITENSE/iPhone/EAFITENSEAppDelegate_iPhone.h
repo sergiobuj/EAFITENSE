@@ -10,7 +10,7 @@
 #import "EAFITENSEAppDelegate.h"
 
 @interface EAFITENSEAppDelegate_iPhone : EAFITENSEAppDelegate {
-    
+    UINavigationController * mainEntrance;
 }
 
 @end

@@ -43,6 +43,7 @@
 		A08C2FD01364C82200C871DF /* eafit.png in Resources */ = {isa = PBXBuildFile; fileRef = A08C2FCE1364C82200C871DF /* eafit.png */; };
 		A08C2FD31364C82900C871DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A08C2FD11364C82900C871DF /* Localizable.strings */; };
 		A08C2FD51364C83300C871DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A08C2FD11364C82900C871DF /* Localizable.strings */; };
+		A08C2FD81364D09000C871DF /* LasVegasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2FD71364D09000C871DF /* LasVegasViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,7 +108,9 @@
 		A08C2FCD1364C82200C871DF /* 2eafit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2eafit.png; sourceTree = "<group>"; };
 		A08C2FCE1364C82200C871DF /* eafit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eafit.png; sourceTree = "<group>"; };
 		A08C2FD21364C82900C871DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = EAFITENSE/en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A08C2FD41364C83300C871DF /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = EAFITENSE/es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A08C2FD41364C83300C871DF /* es */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = es; path = EAFITENSE/es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A08C2FD61364D09000C871DF /* LasVegasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LasVegasViewController.h; path = iPhone/LasVegasViewController.h; sourceTree = "<group>"; };
+		A08C2FD71364D09000C871DF /* LasVegasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LasVegasViewController.m; path = iPhone/LasVegasViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +202,8 @@
 				A08C2F3E1364C0EF00C871DF /* EAFITENSEAppDelegate_iPhone.h */,
 				A08C2F3F1364C0EF00C871DF /* EAFITENSEAppDelegate_iPhone.m */,
 				A08C2F411364C0EF00C871DF /* MainWindow_iPhone.xib */,
+				A08C2FD61364D09000C871DF /* LasVegasViewController.h */,
+				A08C2FD71364D09000C871DF /* LasVegasViewController.m */,
 			);
 			name = iPhone;
 			sourceTree = "<group>";
@@ -447,6 +452,7 @@
 				A08C2F9E1364C2B900C871DF /* PlistReader.m in Sources */,
 				A08C2F9F1364C2B900C871DF /* RSSFeed.m in Sources */,
 				A08C2FA01364C2B900C871DF /* SBXMLParser.m in Sources */,
+				A08C2FD81364D09000C871DF /* LasVegasViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
