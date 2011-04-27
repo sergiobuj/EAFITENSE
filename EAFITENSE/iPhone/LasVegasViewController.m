@@ -36,34 +36,6 @@ enum {
 
 		newsFeed = [[RSSFeed alloc] initWithStyle:UITableViewStylePlain];
 		campusMap = [[CampusMap alloc] init];
-		
-		CGFloat viewW = self.view.frame.size.width;
-		CGFloat viewH = self.view.frame.size.height;
-		
-		UIButton * launchCampus = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-		[launchCampus setFrame:CGRectMake(viewW * 0.1, viewH * 0.1 , 20 , 20)];
-		[launchCampus setTitle:NSLocalizedString(@"map_title", @"") forState:UIControlStateNormal];
-		[launchCampus setTag:map_tag];
-		[launchCampus sizeToFit];
-		[launchCampus addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchDown];
-		[self.view addSubview:launchCampus];				
-
-		UIButton * launchGrades = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-		[launchGrades setFrame:CGRectMake( viewW * 0.1 ,  viewH * 0.2, 20, 20)];
-		[launchGrades setTitle:NSLocalizedString(@"ulises_title", @"") forState:UIControlStateNormal];
-		[launchGrades setTag:ulises_tag];
-		[launchGrades sizeToFit];
-		[launchGrades addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchDown];
-		[self.view addSubview:launchGrades];
-		
-		
-		UIButton * launchFeed = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-		[launchFeed setFrame:CGRectMake( viewW * 0.1 ,  viewH * 0.3, 20, 20)];
-		[launchFeed setTitle:NSLocalizedString(@"news_title", @"") forState:UIControlStateNormal];
-		[launchFeed setTag:news_tag];
-		[launchFeed sizeToFit];
-		[launchFeed addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchDown];
-		[self.view addSubview:launchFeed];		
 
 	}
 	return self;
@@ -87,12 +59,60 @@ enum {
 
 #pragma mark - View lifecycle
 
-/*
+
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView
 {
+	UIView * cookingView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
+	
+	CGFloat viewW = cookingView.frame.size.width;
+	CGFloat viewH = cookingView.frame.size.height;
+	
+	UIButton * launchCampus = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+	[launchCampus setFrame:CGRectMake(viewW * 0.1, viewH * 0.1 , 20 , 20)];
+	[launchCampus setTitle:NSLocalizedString(@"map_title", @"") forState:UIControlStateNormal];
+	[launchCampus setTag:map_tag];
+	[launchCampus sizeToFit];
+	[launchCampus addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchDown];
+	[cookingView addSubview:launchCampus];				
+	
+	UIButton * launchGrades = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+	[launchGrades setFrame:CGRectMake( viewW * 0.1 ,  viewH * 0.2, 20, 20)];
+	[launchGrades setTitle:NSLocalizedString(@"ulises_title", @"") forState:UIControlStateNormal];
+	[launchGrades setTag:ulises_tag];
+	[launchGrades sizeToFit];
+	[launchGrades addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchDown];
+	[cookingView addSubview:launchGrades];
+	
+	
+	UIButton * launchFeed = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+	[launchFeed setFrame:CGRectMake( viewW * 0.1 ,  viewH * 0.3, 20, 20)];
+	[launchFeed setTitle:NSLocalizedString(@"news_title", @"") forState:UIControlStateNormal];
+	[launchFeed setTag:news_tag];
+	[launchFeed sizeToFit];
+	[launchFeed addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchDown];
+	[cookingView addSubview:launchFeed];
+	
+	
+	[self setView:cookingView];
+
+	[cookingView release];
+	
+	[self showModal:self];	
+	
 }
-*/
+
+
+- (void) showModal:(id)sender{
+	
+	ModalViewLogin *stc  = [[ModalViewLogin alloc] init];
+	stc.delegate = self;
+	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:stc];
+	[self.navigationController presentModalViewController:navController animated:YES];
+	self.navigationItem.prompt = nil;
+	[navController release];
+	[stc release];
+}
 
 /*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -138,6 +158,29 @@ enum {
 			break;
 	}
 	
+}
+
+
+
+#pragma mark -
+#pragma mark ModalViewDelegate Methods
+- (void) loginWithUsername:(NSString *) username andPass:(NSString *)password {
+
+	NSLog(@"username");
+	if ([username isEqualToString:@"Pow"]) {
+		[self dismissModalViewControllerAnimated:YES];		
+	}else{
+		UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"" message:@"" delegate:self cancelButtonTitle:@"" otherButtonTitles:@"", nil];
+		[alert show];
+		[alert release];
+	}
+
+}
+
+- (void) loginCancelled {
+
+	NSLog(@"cancelled");
+
 }
 
 @end

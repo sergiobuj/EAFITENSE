@@ -44,6 +44,9 @@
 		A08C2FD31364C82900C871DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A08C2FD11364C82900C871DF /* Localizable.strings */; };
 		A08C2FD51364C83300C871DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A08C2FD11364C82900C871DF /* Localizable.strings */; };
 		A08C2FD81364D09000C871DF /* LasVegasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2FD71364D09000C871DF /* LasVegasViewController.m */; };
+		A0CA01801365311500E90B9A /* ModalViewLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CA017F1365311500E90B9A /* ModalViewLogin.m */; };
+		A0CA01841365328800E90B9A /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CA01831365328800E90B9A /* SFHFKeychainUtils.m */; };
+		A0CA018A1365332600E90B9A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0CA01891365332600E90B9A /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +114,11 @@
 		A08C2FD41364C83300C871DF /* es */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = es; path = EAFITENSE/es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A08C2FD61364D09000C871DF /* LasVegasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LasVegasViewController.h; path = iPhone/LasVegasViewController.h; sourceTree = "<group>"; };
 		A08C2FD71364D09000C871DF /* LasVegasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LasVegasViewController.m; path = iPhone/LasVegasViewController.m; sourceTree = "<group>"; };
+		A0CA017E1365311500E90B9A /* ModalViewLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewLogin.h; sourceTree = "<group>"; };
+		A0CA017F1365311500E90B9A /* ModalViewLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewLogin.m; sourceTree = "<group>"; };
+		A0CA01821365328800E90B9A /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
+		A0CA01831365328800E90B9A /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
+		A0CA01891365332600E90B9A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0CA018A1365332600E90B9A /* Security.framework in Frameworks */,
 				A08C2FB21364C40D00C871DF /* Foundation.framework in Frameworks */,
 				A08C2FAC1364C3F200C871DF /* CoreFoundation.framework in Frameworks */,
 				A08C2FAD1364C3F200C871DF /* CoreGraphics.framework in Frameworks */,
@@ -143,6 +152,7 @@
 				A08C2FD11364C82900C871DF /* Localizable.strings */,
 				A08C2FCC1364C82200C871DF /* Images */,
 				A08C2F731364C2B800C871DF /* EGOTableViewPullRefresh */,
+				A0CA01811365328800E90B9A /* security */,
 				A08C2F841364C2B800C871DF /* Shared */,
 				A08C2F311364C0EF00C871DF /* EAFITENSE */,
 				A08C2F561364C0F000C871DF /* EAFITENSETests */,
@@ -163,6 +173,7 @@
 		A08C2F2A1364C0EF00C871DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A0CA01891365332600E90B9A /* Security.framework */,
 				A08C2FB11364C40D00C871DF /* Foundation.framework */,
 				A08C2FA71364C3F100C871DF /* CoreFoundation.framework */,
 				A08C2FA81364C3F100C871DF /* CoreGraphics.framework */,
@@ -293,6 +304,8 @@
 		A08C2F841364C2B800C871DF /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A0CA017E1365311500E90B9A /* ModalViewLogin.h */,
+				A0CA017F1365311500E90B9A /* ModalViewLogin.m */,
 				A08C2F721364C2B800C871DF /* Customization.plist */,
 				A08C2F851364C2B800C871DF /* CampusMap.h */,
 				A08C2F861364C2B800C871DF /* CampusMap.m */,
@@ -317,6 +330,16 @@
 			);
 			name = Images;
 			path = EAFITENSE/Images;
+			sourceTree = "<group>";
+		};
+		A0CA01811365328800E90B9A /* security */ = {
+			isa = PBXGroup;
+			children = (
+				A0CA01821365328800E90B9A /* SFHFKeychainUtils.h */,
+				A0CA01831365328800E90B9A /* SFHFKeychainUtils.m */,
+			);
+			name = security;
+			path = EAFITENSE/security;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,6 +476,8 @@
 				A08C2F9F1364C2B900C871DF /* RSSFeed.m in Sources */,
 				A08C2FA01364C2B900C871DF /* SBXMLParser.m in Sources */,
 				A08C2FD81364D09000C871DF /* LasVegasViewController.m in Sources */,
+				A0CA01801365311500E90B9A /* ModalViewLogin.m in Sources */,
+				A0CA01841365328800E90B9A /* SFHFKeychainUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,14 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ModalViewLogin.h"
+
 @class RSSFeed, CampusMap;
 
-@interface LasVegasViewController : UIViewController {
+@interface LasVegasViewController : UIViewController <ModalViewLoginDelegate> {
     
 	RSSFeed * newsFeed;
 	CampusMap * campusMap;
 }
 
 - (void) buttonPressed:(id) sender;
-
+- (void) showModal:(id)sender;
 @end

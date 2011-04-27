@@ -28,7 +28,7 @@
 - (void)loadView {
 	[self setTitle:NSLocalizedString(@"map_title", @"")];
 	campusMapView = [[MKMapView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
-	[campusMapView setMapType:MKMapTypeStandard];
+	[campusMapView setMapType:MKMapTypeHybrid];
 	[campusMapView setDelegate:self];
 
 	

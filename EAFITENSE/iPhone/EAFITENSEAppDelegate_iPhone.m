@@ -15,13 +15,17 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {	
 	LasVegasViewController * viewController = [[LasVegasViewController alloc] init];
+	
 	mainEntrance = [[UINavigationController alloc] initWithRootViewController:viewController];
-	[viewController release];
 	
 	[self.window addSubview:mainEntrance.view];
-	
+
 	[self.window makeKeyAndVisible];
+
+	[viewController release];
+
     return YES;
+
 }
 
 - (void)dealloc
