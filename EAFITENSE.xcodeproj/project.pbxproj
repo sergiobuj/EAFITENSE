@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A04D54DF138A2CAD00DA8372 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04D54DE138A2CAD00DA8372 /* MapKit.framework */; };
 		A08C2F361364C0EF00C871DF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A08C2F341364C0EF00C871DF /* InfoPlist.strings */; };
 		A08C2F391364C0EF00C871DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F381364C0EF00C871DF /* main.m */; };
 		A08C2F3C1364C0EF00C871DF /* EAFITENSEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F3B1364C0EF00C871DF /* EAFITENSEAppDelegate.m */; };
@@ -35,7 +36,6 @@
 		A08C2FA01364C2B900C871DF /* SBXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F8E1364C2B800C871DF /* SBXMLParser.m */; };
 		A08C2FAC1364C3F200C871DF /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2FA71364C3F100C871DF /* CoreFoundation.framework */; };
 		A08C2FAD1364C3F200C871DF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2FA81364C3F100C871DF /* CoreGraphics.framework */; };
-		A08C2FAE1364C3F200C871DF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2FA91364C3F100C871DF /* MapKit.framework */; };
 		A08C2FAF1364C3F200C871DF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2FAA1364C3F200C871DF /* QuartzCore.framework */; };
 		A08C2FB01364C3F200C871DF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2FAB1364C3F200C871DF /* UIKit.framework */; };
 		A08C2FB21364C40D00C871DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2FB11364C40D00C871DF /* Foundation.framework */; };
@@ -60,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A04D54DE138A2CAD00DA8372 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A08C2F271364C0EF00C871DF /* EAFITENSE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EAFITENSE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08C2F331364C0EF00C871DF /* EAFITENSE-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EAFITENSE-Info.plist"; sourceTree = "<group>"; };
 		A08C2F351364C0EF00C871DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -104,7 +105,6 @@
 		A08C2F8E1364C2B800C871DF /* SBXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBXMLParser.m; sourceTree = "<group>"; };
 		A08C2FA71364C3F100C871DF /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		A08C2FA81364C3F100C871DF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A08C2FA91364C3F100C871DF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A08C2FAA1364C3F200C871DF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A08C2FAB1364C3F200C871DF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A08C2FB11364C40D00C871DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -126,11 +126,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A04D54DF138A2CAD00DA8372 /* MapKit.framework in Frameworks */,
 				A0CA018A1365332600E90B9A /* Security.framework in Frameworks */,
 				A08C2FB21364C40D00C871DF /* Foundation.framework in Frameworks */,
 				A08C2FAC1364C3F200C871DF /* CoreFoundation.framework in Frameworks */,
 				A08C2FAD1364C3F200C871DF /* CoreGraphics.framework in Frameworks */,
-				A08C2FAE1364C3F200C871DF /* MapKit.framework in Frameworks */,
 				A08C2FAF1364C3F200C871DF /* QuartzCore.framework in Frameworks */,
 				A08C2FB01364C3F200C871DF /* UIKit.framework in Frameworks */,
 			);
@@ -173,11 +173,11 @@
 		A08C2F2A1364C0EF00C871DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A04D54DE138A2CAD00DA8372 /* MapKit.framework */,
 				A0CA01891365332600E90B9A /* Security.framework */,
 				A08C2FB11364C40D00C871DF /* Foundation.framework */,
 				A08C2FA71364C3F100C871DF /* CoreFoundation.framework */,
 				A08C2FA81364C3F100C871DF /* CoreGraphics.framework */,
-				A08C2FA91364C3F100C871DF /* MapKit.framework */,
 				A08C2FAA1364C3F200C871DF /* QuartzCore.framework */,
 				A08C2FAB1364C3F200C871DF /* UIKit.framework */,
 			);

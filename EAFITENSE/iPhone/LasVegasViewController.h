@@ -8,13 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "ModalViewLogin.h"
-
+#import "PlistReader.h"
 @class RSSFeed, CampusMap;
 
 @interface LasVegasViewController : UIViewController <ModalViewLoginDelegate> {
     
-	RSSFeed * newsFeed;
-	CampusMap * campusMap;
+	//	RSSFeed * newsFeed;
+	//	CampusMap * campusMap;
+	
+	NSMutableDictionary * pagesDictionary;
+
+
+
 }
 
 - (void) buttonPressed:(id) sender;

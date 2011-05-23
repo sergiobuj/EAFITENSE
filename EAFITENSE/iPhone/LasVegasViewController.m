@@ -33,9 +33,9 @@ enum {
 	self = [super init];
 	if (self) {
 		[super viewDidLoad];
-
-		newsFeed = [[RSSFeed alloc] initWithStyle:UITableViewStylePlain];
-		campusMap = [[CampusMap alloc] init];
+		pagesDictionary = [[NSMutableDictionary alloc] init];
+		//		newsFeed = [[RSSFeed alloc] initWithStyle:UITableViewStylePlain];
+		//		campusMap = [[CampusMap alloc] init];
 
 	}
 	return self;
@@ -44,8 +44,9 @@ enum {
 
 - (void)dealloc
 {
-	[campusMap release];
-	[newsFeed release];
+	//	[campusMap release];
+	//	[newsFeed release];
+	[pagesDictionary release];
     [super dealloc];
 }
 
@@ -67,38 +68,83 @@ enum {
 	
 	CGFloat viewW = cookingView.frame.size.width;
 	CGFloat viewH = cookingView.frame.size.height;
+	CGFloat buttonYStart = 0.1;
+
+	NSArray *pages = [NSArray arrayWithArray:[PlistReader arrayForResource:@"pages" fromPlist:@"Customization"]];
 	
-	UIButton * launchCampus = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	[launchCampus setFrame:CGRectMake(viewW * 0.1, viewH * 0.1 , 20 , 20)];
-	[launchCampus setTitle:NSLocalizedString(@"map_title", @"") forState:UIControlStateNormal];
-	[launchCampus setTag:map_tag];
-	[launchCampus sizeToFit];
-	[launchCampus addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchDown];
-	[cookingView addSubview:launchCampus];				
-	
-	UIButton * launchGrades = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	[launchGrades setFrame:CGRectMake( viewW * 0.1 ,  viewH * 0.2, 20, 20)];
-	[launchGrades setTitle:NSLocalizedString(@"ulises_title", @"") forState:UIControlStateNormal];
-	[launchGrades setTag:ulises_tag];
-	[launchGrades sizeToFit];
-	[launchGrades addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchDown];
-	[cookingView addSubview:launchGrades];
-	
-	
-	UIButton * launchFeed = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	[launchFeed setFrame:CGRectMake( viewW * 0.1 ,  viewH * 0.3, 20, 20)];
-	[launchFeed setTitle:NSLocalizedString(@"news_title", @"") forState:UIControlStateNormal];
-	[launchFeed setTag:news_tag];
-	[launchFeed sizeToFit];
-	[launchFeed addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchDown];
-	[cookingView addSubview:launchFeed];
+	for ( NSArray * page in pages ) {
+		for (NSDictionary * button in page) {
+			UIButton * tempButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+			[tempButton setFrame:CGRectMake(viewW * 0.1, viewH * buttonYStart , 20 , 20)];
+			[tempButton setTitle:NSLocalizedString( [button objectForKey:@"title"] , @"") forState:UIControlStateNormal];
+			NSString * classNameString = [NSString stringWithString:[button objectForKey:@"viewController"]];
+			[tempButton setTitle:classNameString forState:UIControlStateApplication];
+			[tempButton setTag:buttonYStart * 10];
+			[tempButton sizeToFit];
+			[tempButton addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchDown];
+			
+			if( [classNameString isEqualToString:@""] ){
+			
+				[tempButton setEnabled: NO];
+				[tempButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+			} else {
+				Class viewCClass = NSClassFromString(classNameString);
+				if([pagesDictionary objectForKey:classNameString] == nil){
+					id page = [[viewCClass alloc] init];
+					[pagesDictionary setValue:page forKey:classNameString];
+					NSLog(@"%@ %d", classNameString, [page retainCount]);
+					[page release];
+					NSLog(@"%@ %d", classNameString, [page retainCount]);
+				}
+				
+			}
+
+			//			NSString * buttonURL = [NSString stringWithString:[button objectForKey:@"url"]];
+			//			NSString * buttonViewCont  = [NSString stringWithString:[button objectForKey:@"viewController"]];
+			
+			//			if ( ![buttonViewCont isEqual:@""]) {
+			//				[map from:buttonURL toViewController:NSClassFromString(buttonViewCont)];
+			//			}
+			
+			[cookingView addSubview:tempButton];
+
+			//[tempButton release];
+			buttonYStart += 0.1;
+		}
+	}
+
+
+//	UIButton * launchCampus = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//	[launchCampus setFrame:CGRectMake(viewW * 0.1, viewH * 0.1 , 20 , 20)];
+//	[launchCampus setTitle:NSLocalizedString(@"map_title", @"") forState:UIControlStateNormal];
+//	[launchCampus setTag:map_tag];
+//	[launchCampus sizeToFit];
+//	[launchCampus addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchDown];
+//	[cookingView addSubview:launchCampus];				
+//	
+//	UIButton * launchGrades = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//	[launchGrades setFrame:CGRectMake( viewW * 0.1 ,  viewH * 0.2, 20, 20)];
+//	[launchGrades setTitle:NSLocalizedString(@"ulises_title", @"") forState:UIControlStateNormal];
+//	[launchGrades setTag:ulises_tag];
+//	[launchGrades sizeToFit];
+//	[launchGrades addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchDown];
+//	[cookingView addSubview:launchGrades];
+//	
+//	
+//	UIButton * launchFeed = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//	[launchFeed setFrame:CGRectMake( viewW * 0.1 ,  viewH * 0.3, 20, 20)];
+//	[launchFeed setTitle:NSLocalizedString(@"news_title", @"") forState:UIControlStateNormal];
+//	[launchFeed setTag:news_tag];
+//	[launchFeed sizeToFit];
+//	[launchFeed addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchDown];
+//	[cookingView addSubview:launchFeed];
 	
 	
 	[self setView:cookingView];
 
 	[cookingView release];
 	
-	[self showModal:self];	
+	///////[self showModal:self];	
 	
 }
 
@@ -137,7 +183,12 @@ enum {
 
 
 - (void) buttonPressed:(id)sender {
-
+	NSLog(@"tag:%d viewController:%@", [sender tag], [sender titleForState:UIControlStateApplication]);
+	
+	
+	[self.navigationController pushViewController:[pagesDictionary objectForKey: [sender titleForState:UIControlStateApplication]] animated:YES];
+	
+	/*
 	switch ([sender tag]) {
 		case news_tag:
 			[self.navigationController pushViewController:newsFeed animated:YES];
@@ -145,7 +196,7 @@ enum {
 			break;
 			
 		case ulises_tag:
-			NSLog(@"tag:%d", ulises_tag);
+			//NSLog(@"tag:%d", ulises_tag);
 			break;
 			
 			
@@ -157,7 +208,7 @@ enum {
 		default:
 			break;
 	}
-	
+	*/
 }
 
 
