@@ -378,30 +378,6 @@
 				<key>viewController</key>
 				<string>CampusMap</string>
 			</dict>
-			<dict>
-				<key>can_delete</key>
-				<false/>
-				<key>image</key>
-				<string>eafit.png</string>
-				<key>title</key>
-				<string>Alejito pichurria</string>
-				<key>url</key>
-				<string>tt://campus_map</string>
-				<key>viewController</key>
-				<string>CampusMap</string>
-			</dict>
-			<dict>
-				<key>can_delete</key>
-				<false/>
-				<key>image</key>
-				<string>eafit.png</string>
-				<key>title</key>
-				<string>felini</string>
-				<key>url</key>
-				<string>tt://campus_map</string>
-				<key>viewController</key>
-				<string>CampusMap</string>
-			</dict>
 		</array>
 	</array>
 	<key>rss_feeds</key>
