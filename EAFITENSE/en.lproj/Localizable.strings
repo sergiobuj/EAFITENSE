@@ -10,6 +10,7 @@
 "search_engine_title" = "Google";
 "ulises_title" = "ULISES";
 "ei_title" = "EInteractiva";
+"grades_title" = "Notas Semestre";
 
 "last_updated" = "Last Updated: %@";
 "release_to_refresh" = "Release to refresh...";

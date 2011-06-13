@@ -378,6 +378,18 @@
 				<key>viewController</key>
 				<string>CampusMap</string>
 			</dict>
+			<dict>
+				<key>can_delete</key>
+				<false/>
+				<key>image</key>
+				<string></string>
+				<key>title</key>
+				<string>grades_title</string>
+				<key>url</key>
+				<string>tt://grades</string>
+				<key>viewController</key>
+				<string>GradesViewController</string>
+			</dict>
 		</array>
 	</array>
 	<key>rss_feeds</key>
