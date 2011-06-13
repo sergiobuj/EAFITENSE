@@ -42,8 +42,9 @@
 		A08C2FCF1364C82200C871DF /* 2eafit.png in Resources */ = {isa = PBXBuildFile; fileRef = A08C2FCD1364C82200C871DF /* 2eafit.png */; };
 		A08C2FD01364C82200C871DF /* eafit.png in Resources */ = {isa = PBXBuildFile; fileRef = A08C2FCE1364C82200C871DF /* eafit.png */; };
 		A08C2FD31364C82900C871DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A08C2FD11364C82900C871DF /* Localizable.strings */; };
-		A08C2FD51364C83300C871DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A08C2FD11364C82900C871DF /* Localizable.strings */; };
 		A08C2FD81364D09000C871DF /* LasVegasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2FD71364D09000C871DF /* LasVegasViewController.m */; };
+		A0A240AA13A5D8D3007B5BFE /* logosimbolo_eafit copy.png in Resources */ = {isa = PBXBuildFile; fileRef = A0A240A913A5D8D3007B5BFE /* logosimbolo_eafit copy.png */; };
+		A0A240AD13A5D9F8007B5BFE /* UIColor+SBColors.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A240AC13A5D9F8007B5BFE /* UIColor+SBColors.m */; };
 		A0CA01801365311500E90B9A /* ModalViewLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CA017F1365311500E90B9A /* ModalViewLogin.m */; };
 		A0CA01841365328800E90B9A /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CA01831365328800E90B9A /* SFHFKeychainUtils.m */; };
 		A0CA018A1365332600E90B9A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0CA01891365332600E90B9A /* Security.framework */; };
@@ -114,6 +115,9 @@
 		A08C2FD41364C83300C871DF /* es */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = es; path = EAFITENSE/es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A08C2FD61364D09000C871DF /* LasVegasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LasVegasViewController.h; path = iPhone/LasVegasViewController.h; sourceTree = "<group>"; };
 		A08C2FD71364D09000C871DF /* LasVegasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LasVegasViewController.m; path = iPhone/LasVegasViewController.m; sourceTree = "<group>"; };
+		A0A240A913A5D8D3007B5BFE /* logosimbolo_eafit copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logosimbolo_eafit copy.png"; sourceTree = "<group>"; };
+		A0A240AB13A5D9F8007B5BFE /* UIColor+SBColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SBColors.h"; sourceTree = "<group>"; };
+		A0A240AC13A5D9F8007B5BFE /* UIColor+SBColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SBColors.m"; sourceTree = "<group>"; };
 		A0CA017E1365311500E90B9A /* ModalViewLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewLogin.h; sourceTree = "<group>"; };
 		A0CA017F1365311500E90B9A /* ModalViewLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewLogin.m; sourceTree = "<group>"; };
 		A0CA01821365328800E90B9A /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
@@ -317,6 +321,8 @@
 				A08C2F8C1364C2B800C871DF /* RSSFeed.m */,
 				A08C2F8D1364C2B800C871DF /* SBXMLParser.h */,
 				A08C2F8E1364C2B800C871DF /* SBXMLParser.m */,
+				A0A240AB13A5D9F8007B5BFE /* UIColor+SBColors.h */,
+				A0A240AC13A5D9F8007B5BFE /* UIColor+SBColors.m */,
 			);
 			name = Shared;
 			path = EAFITENSE/Shared;
@@ -325,6 +331,7 @@
 		A08C2FCC1364C82200C871DF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A0A240A913A5D8D3007B5BFE /* logosimbolo_eafit copy.png */,
 				A08C2FCD1364C82200C871DF /* 2eafit.png */,
 				A08C2FCE1364C82200C871DF /* eafit.png */,
 			);
@@ -387,6 +394,7 @@
 		A08C2F1E1364C0EF00C871DF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = Sergiobuj;
 			};
 			buildConfigurationList = A08C2F211364C0EF00C871DF /* Build configuration list for PBXProject "EAFITENSE" */;
@@ -428,7 +436,7 @@
 				A08C2FCF1364C82200C871DF /* 2eafit.png in Resources */,
 				A08C2FD01364C82200C871DF /* eafit.png in Resources */,
 				A08C2FD31364C82900C871DF /* Localizable.strings in Resources */,
-				A08C2FD51364C83300C871DF /* Localizable.strings in Resources */,
+				A0A240AA13A5D8D3007B5BFE /* logosimbolo_eafit copy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +486,7 @@
 				A08C2FD81364D09000C871DF /* LasVegasViewController.m in Sources */,
 				A0CA01801365311500E90B9A /* ModalViewLogin.m in Sources */,
 				A0CA01841365328800E90B9A /* SFHFKeychainUtils.m in Sources */,
+				A0A240AD13A5D9F8007B5BFE /* UIColor+SBColors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +563,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
@@ -569,6 +579,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;

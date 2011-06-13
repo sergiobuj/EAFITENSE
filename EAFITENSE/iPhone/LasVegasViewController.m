@@ -37,6 +37,10 @@ enum {
 		//		newsFeed = [[RSSFeed alloc] initWithStyle:UITableViewStylePlain];
 		//		campusMap = [[CampusMap alloc] init];
 
+		UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logosimbolo_eafit copy"]];
+		[[self navigationItem] setTitleView:imageView];
+		[imageView release];
+		
 	}
 	return self;
 }
@@ -83,18 +87,19 @@ enum {
 			[tempButton sizeToFit];
 			[tempButton addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchDown];
 			
-			if( [classNameString isEqualToString:@""] ){
+			if( [classNameString isEqualToString:@""] || NSClassFromString(classNameString)== nil ){
 			
 				[tempButton setEnabled: NO];
 				[tempButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
 			} else {
 				Class viewCClass = NSClassFromString(classNameString);
+				//				if(viewCClass) NSLog(@"nsclass %@", viewCClass);
 				if([pagesDictionary objectForKey:classNameString] == nil){
 					id page = [[viewCClass alloc] init];
 					[pagesDictionary setValue:page forKey:classNameString];
-					NSLog(@"%@ %d", classNameString, [page retainCount]);
+					
 					[page release];
-					NSLog(@"%@ %d", classNameString, [page retainCount]);
+
 				}
 				
 			}
@@ -183,7 +188,6 @@ enum {
 
 
 - (void) buttonPressed:(id)sender {
-	NSLog(@"tag:%d viewController:%@", [sender tag], [sender titleForState:UIControlStateApplication]);
 	
 	
 	[self.navigationController pushViewController:[pagesDictionary objectForKey: [sender titleForState:UIControlStateApplication]] animated:YES];

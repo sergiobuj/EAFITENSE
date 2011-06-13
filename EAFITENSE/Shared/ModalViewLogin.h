@@ -15,7 +15,7 @@
 	UITextField *passField;
 
 }
-@property (nonatomic, retain) id <ModalViewLoginDelegate> delegate;
+@property (nonatomic, assign) id <ModalViewLoginDelegate> delegate;
 @property (nonatomic, retain) UITextField *userField;
 @property (nonatomic, retain) UITextField *passField;
 

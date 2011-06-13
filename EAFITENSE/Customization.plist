@@ -270,7 +270,7 @@
 			<key>longitude</key>
 			<real>-75.57894</real>
 			<key>subtitle</key>
-			<string></string>
+			<string>sub bloque 16</string>
 			<key>title</key>
 			<string>Bloque 16</string>
 		</dict>
@@ -352,7 +352,7 @@
 				<key>url</key>
 				<string>http://www.eafit.edu.co/ulises</string>
 				<key>viewController</key>
-				<string></string>
+				<string>donke</string>
 			</dict>
 			<dict>
 				<key>can_delete</key>
@@ -373,30 +373,6 @@
 				<string>eafit.png</string>
 				<key>title</key>
 				<string>map_title</string>
-				<key>url</key>
-				<string>tt://campus_map</string>
-				<key>viewController</key>
-				<string>CampusMap</string>
-			</dict>
-			<dict>
-				<key>can_delete</key>
-				<false/>
-				<key>image</key>
-				<string>eafit.png</string>
-				<key>title</key>
-				<string>Alejito pichurria</string>
-				<key>url</key>
-				<string>tt://campus_map</string>
-				<key>viewController</key>
-				<string>CampusMap</string>
-			</dict>
-			<dict>
-				<key>can_delete</key>
-				<false/>
-				<key>image</key>
-				<string>eafit.png</string>
-				<key>title</key>
-				<string>felini</string>
 				<key>url</key>
 				<string>tt://campus_map</string>
 				<key>viewController</key>
