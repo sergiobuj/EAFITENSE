@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A0100C9513B7B21400BC7F24 /* SBServiceCentral.m in Sources */ = {isa = PBXBuildFile; fileRef = A0100C9413B7B21400BC7F24 /* SBServiceCentral.m */; };
+		A0100C9813B7E2D100BC7F24 /* ExamsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0100C9713B7E2D000BC7F24 /* ExamsViewController.m */; };
+		A0100C9B13B7F70700BC7F24 /* GPAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0100C9A13B7F70700BC7F24 /* GPAViewController.m */; };
 		A04D54DF138A2CAD00DA8372 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04D54DE138A2CAD00DA8372 /* MapKit.framework */; };
 		A08C2F361364C0EF00C871DF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A08C2F341364C0EF00C871DF /* InfoPlist.strings */; };
 		A08C2F391364C0EF00C871DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F381364C0EF00C871DF /* main.m */; };
@@ -75,6 +77,10 @@
 /* Begin PBXFileReference section */
 		A0100C9313B7B21400BC7F24 /* SBServiceCentral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBServiceCentral.h; sourceTree = "<group>"; };
 		A0100C9413B7B21400BC7F24 /* SBServiceCentral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBServiceCentral.m; sourceTree = "<group>"; };
+		A0100C9613B7E2D000BC7F24 /* ExamsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamsViewController.h; sourceTree = "<group>"; };
+		A0100C9713B7E2D000BC7F24 /* ExamsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamsViewController.m; sourceTree = "<group>"; };
+		A0100C9913B7F70600BC7F24 /* GPAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPAViewController.h; sourceTree = "<group>"; };
+		A0100C9A13B7F70700BC7F24 /* GPAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPAViewController.m; sourceTree = "<group>"; };
 		A04D54DE138A2CAD00DA8372 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A08C2F271364C0EF00C871DF /* EAFITENSE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EAFITENSE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08C2F331364C0EF00C871DF /* EAFITENSE-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EAFITENSE-Info.plist"; sourceTree = "<group>"; };
@@ -365,6 +371,10 @@
 				A0D1D25913A5F88E00F3A3AC /* GradesViewController.m */,
 				A0100C9313B7B21400BC7F24 /* SBServiceCentral.h */,
 				A0100C9413B7B21400BC7F24 /* SBServiceCentral.m */,
+				A0100C9613B7E2D000BC7F24 /* ExamsViewController.h */,
+				A0100C9713B7E2D000BC7F24 /* ExamsViewController.m */,
+				A0100C9913B7F70600BC7F24 /* GPAViewController.h */,
+				A0100C9A13B7F70700BC7F24 /* GPAViewController.m */,
 			);
 			name = Shared;
 			path = EAFITENSE/Shared;
@@ -594,6 +604,8 @@
 				A0D1D29E13A5FECC00F3A3AC /* CJSONScanner.m in Sources */,
 				A0D1D29F13A5FECC00F3A3AC /* CJSONSerializer.m in Sources */,
 				A0100C9513B7B21400BC7F24 /* SBServiceCentral.m in Sources */,
+				A0100C9813B7E2D100BC7F24 /* ExamsViewController.m in Sources */,
+				A0100C9B13B7F70700BC7F24 /* GPAViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

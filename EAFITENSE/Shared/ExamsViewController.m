@@ -6,9 +6,9 @@
 //  Copyright 2011 Sergiobuj. All rights reserved.
 //
 
-#import "GradesViewController.h"
+#import "ExamsViewController.h"
 
-@implementation GradesViewController
+@implementation ExamsViewController
 
 @synthesize dataArray;
 
@@ -24,7 +24,7 @@
 		
 		dataArray = [[NSMutableArray alloc]init];
         // Custom initialization
-		    }
+	}
     return self;
 }
 
@@ -42,7 +42,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-	[SBServiceCentral fetchResource:SBServiceCentralGrades withTarget:self];
+	[SBServiceCentral fetchResource:SBServiceCentralExams withTarget:self];
 	
 }
 
@@ -69,7 +69,7 @@
     // Return the number of rows in the section.
     if (dataArray) {
 		// Return number of grades already assigned plus one to show the needed grade to pass
-		return [[[dataArray objectAtIndex:section] objectForKey:@"current_grades"] count] + 1;
+		return [[[dataArray objectAtIndex:section] objectForKey:@"examinations"] count];
 	}
 	return 0;
 }
@@ -78,11 +78,10 @@
 {
 	
 	NSDictionary * course = [dataArray objectAtIndex:indexPath.section];
-	NSArray * currentGrades = [course objectForKey:@"current_grades"];
+	NSArray * currentGrades = [course objectForKey:@"examinations"];
 	
 	
     static NSString *CellIdentifier = @"GradeCell";
-    if(indexPath.row > [currentGrades count]) CellIdentifier = @"NeededCell";
 	
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -90,34 +89,13 @@
     }
 	
 	if (indexPath.row < [currentGrades count] && [CellIdentifier isEqualToString:@"GradeCell"]) {
-		[cell.textLabel setText:[[currentGrades objectAtIndex:indexPath.row] objectForKey:@"exam_name"]];
-		[[cell detailTextLabel] setText:[NSString stringWithFormat:@"%d%%",[[[currentGrades objectAtIndex:indexPath.row] objectForKey:@"exam_percentage"]intValue]]];
+		[cell.textLabel setText:[[currentGrades objectAtIndex:indexPath.row] objectForKey:@"name"]];
+		[[cell detailTextLabel] setText:[NSString stringWithFormat:@"%d%%",[[[currentGrades objectAtIndex:indexPath.row] objectForKey:@"date"]intValue]]];
 		UILabel * markLabel = [[UILabel alloc] init];
-		[markLabel setText:[NSString stringWithFormat:@"%.2f",[[[currentGrades objectAtIndex:indexPath.row] objectForKey:@"exam_grade"] floatValue]]];
+		[markLabel setText:[NSString stringWithFormat:@"%.2f",[[[currentGrades objectAtIndex:indexPath.row] objectForKey:@"percentage"] floatValue]]];
 		[markLabel sizeToFit];
 		[cell setAccessoryView:markLabel];
 		[markLabel release];
-	}else{
-		
-		float totalPercentage = 0;
-		float gradeXpercetnage = 0;
-		float gradeToPass = [[course objectForKey:@"grade_to_pass"] floatValue];
-		float gradeNeeded = 0;
-		
-		for (id singleGrade in currentGrades) {
-			totalPercentage += [[singleGrade objectForKey:@"exam_percentage"] floatValue];
-			gradeXpercetnage += ([[singleGrade objectForKey:@"exam_percentage"] floatValue] /100)* [[singleGrade  objectForKey:@"exam_grade"] floatValue];
-		}
-
-		gradeNeeded = (gradeToPass - gradeXpercetnage)/(1 - (totalPercentage)/100);
-		
-
-		[cell.textLabel setText:[NSString stringWithFormat:NSLocalizedString(@"grade_needed_title", @"title for grade needed cell"),gradeToPass]];
-		[cell.detailTextLabel setText:[NSString stringWithFormat:NSLocalizedString(@"percentage_left_with_int", @"needs %d to show percentage left"), (int)(100 - totalPercentage) ]];
-		UILabel * markLabel = [[UILabel alloc] init];
-		[markLabel setText:[NSString stringWithFormat:@"%.2f", gradeNeeded]];
-		[markLabel sizeToFit];
-		[cell setAccessoryView:markLabel];
 	}
 
     [cell setUserInteractionEnabled:NO];
@@ -137,10 +115,10 @@
 
 
 
-- (void) finishedLoadingGrades:(NSArray *)grades {
-	[dataArray setArray:grades];
+- (void) finishedLoadingExams:exams {
+	[dataArray setArray:exams];
 	[[self tableView] reloadData];
-
+	
 }
 
 

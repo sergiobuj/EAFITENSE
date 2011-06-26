@@ -15,22 +15,26 @@
 + (void) fetchResource:(int)resource withTarget:(id) delegate {
 	
 	id data = nil;
-
+	NSString * serviceURL = nil;
 	switch (resource) {
 		case SBServiceCentralGPA:
+			serviceURL = [NSString stringWithString:@"gpa-service"];
 			data = [[NSMutableDictionary alloc] init];
 			break;
 			
 		case SBServiceCentralExams:
+			if(!serviceURL) serviceURL = [NSString stringWithString:@"exams-service"];
 		case SBServiceCentralGrades:
+			if(!serviceURL) serviceURL = [NSString stringWithString:@"grades-service"];
 		case SBServiceCentralSchedule:
+			if(!serviceURL) serviceURL = [NSString stringWithString:@"schedule-service"];
 			data = [[NSMutableArray alloc] init];
 			break;
 	}
 	
 	[[NSOperationQueue mainQueue] addOperationWithBlock:^{
 		NSError * error = nil;
-		NSString * resourceAsString = [NSString stringWithContentsOfURL:[NSURL URLWithString:[SBPlistReader valueForResource:@"grades-service" fromPlist:@"Customization"]] encoding:NSUTF8StringEncoding error:&error];
+		NSString * resourceAsString = [NSString stringWithContentsOfURL:[NSURL URLWithString:[SBPlistReader valueForResource:serviceURL fromPlist:@"Customization"]] encoding:NSUTF8StringEncoding error:&error];
 		if (error) {
 			NSLog(@"%@", error);
 		}else {
