@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0100C9513B7B21400BC7F24 /* SBServiceCentral.m in Sources */ = {isa = PBXBuildFile; fileRef = A0100C9413B7B21400BC7F24 /* SBServiceCentral.m */; };
 		A04D54DF138A2CAD00DA8372 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A04D54DE138A2CAD00DA8372 /* MapKit.framework */; };
 		A08C2F361364C0EF00C871DF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A08C2F341364C0EF00C871DF /* InfoPlist.strings */; };
 		A08C2F391364C0EF00C871DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F381364C0EF00C871DF /* main.m */; };
@@ -31,7 +32,7 @@
 		A08C2F9B1364C2B900C871DF /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A08C2F831364C2B800C871DF /* whiteArrow@2x.png */; };
 		A08C2F9C1364C2B900C871DF /* CampusMap.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F861364C2B800C871DF /* CampusMap.m */; };
 		A08C2F9D1364C2B900C871DF /* MapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F881364C2B800C871DF /* MapPoint.m */; };
-		A08C2F9E1364C2B900C871DF /* PlistReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F8A1364C2B800C871DF /* PlistReader.m */; };
+		A08C2F9E1364C2B900C871DF /* SBPlistReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F8A1364C2B800C871DF /* SBPlistReader.m */; };
 		A08C2F9F1364C2B900C871DF /* RSSFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F8C1364C2B800C871DF /* RSSFeed.m */; };
 		A08C2FA01364C2B900C871DF /* SBXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A08C2F8E1364C2B800C871DF /* SBXMLParser.m */; };
 		A08C2FAC1364C3F200C871DF /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A08C2FA71364C3F100C871DF /* CoreFoundation.framework */; };
@@ -72,6 +73,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A0100C9313B7B21400BC7F24 /* SBServiceCentral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBServiceCentral.h; sourceTree = "<group>"; };
+		A0100C9413B7B21400BC7F24 /* SBServiceCentral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBServiceCentral.m; sourceTree = "<group>"; };
 		A04D54DE138A2CAD00DA8372 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A08C2F271364C0EF00C871DF /* EAFITENSE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EAFITENSE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08C2F331364C0EF00C871DF /* EAFITENSE-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EAFITENSE-Info.plist"; sourceTree = "<group>"; };
@@ -109,8 +112,8 @@
 		A08C2F861364C2B800C871DF /* CampusMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampusMap.m; sourceTree = "<group>"; };
 		A08C2F871364C2B800C871DF /* MapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPoint.h; sourceTree = "<group>"; };
 		A08C2F881364C2B800C871DF /* MapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPoint.m; sourceTree = "<group>"; };
-		A08C2F891364C2B800C871DF /* PlistReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistReader.h; sourceTree = "<group>"; };
-		A08C2F8A1364C2B800C871DF /* PlistReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistReader.m; sourceTree = "<group>"; };
+		A08C2F891364C2B800C871DF /* SBPlistReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBPlistReader.h; sourceTree = "<group>"; };
+		A08C2F8A1364C2B800C871DF /* SBPlistReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBPlistReader.m; sourceTree = "<group>"; };
 		A08C2F8B1364C2B800C871DF /* RSSFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSFeed.h; sourceTree = "<group>"; };
 		A08C2F8C1364C2B800C871DF /* RSSFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSFeed.m; sourceTree = "<group>"; };
 		A08C2F8D1364C2B800C871DF /* SBXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBXMLParser.h; sourceTree = "<group>"; };
@@ -350,8 +353,8 @@
 				A08C2F861364C2B800C871DF /* CampusMap.m */,
 				A08C2F871364C2B800C871DF /* MapPoint.h */,
 				A08C2F881364C2B800C871DF /* MapPoint.m */,
-				A08C2F891364C2B800C871DF /* PlistReader.h */,
-				A08C2F8A1364C2B800C871DF /* PlistReader.m */,
+				A08C2F891364C2B800C871DF /* SBPlistReader.h */,
+				A08C2F8A1364C2B800C871DF /* SBPlistReader.m */,
 				A08C2F8B1364C2B800C871DF /* RSSFeed.h */,
 				A08C2F8C1364C2B800C871DF /* RSSFeed.m */,
 				A08C2F8D1364C2B800C871DF /* SBXMLParser.h */,
@@ -360,6 +363,8 @@
 				A0A240AC13A5D9F8007B5BFE /* UIColor+SBColors.m */,
 				A0D1D25813A5F88E00F3A3AC /* GradesViewController.h */,
 				A0D1D25913A5F88E00F3A3AC /* GradesViewController.m */,
+				A0100C9313B7B21400BC7F24 /* SBServiceCentral.h */,
+				A0100C9413B7B21400BC7F24 /* SBServiceCentral.m */,
 			);
 			name = Shared;
 			path = EAFITENSE/Shared;
@@ -570,7 +575,7 @@
 				A08C2F931364C2B900C871DF /* EGORefreshTableHeaderView.m in Sources */,
 				A08C2F9C1364C2B900C871DF /* CampusMap.m in Sources */,
 				A08C2F9D1364C2B900C871DF /* MapPoint.m in Sources */,
-				A08C2F9E1364C2B900C871DF /* PlistReader.m in Sources */,
+				A08C2F9E1364C2B900C871DF /* SBPlistReader.m in Sources */,
 				A08C2F9F1364C2B900C871DF /* RSSFeed.m in Sources */,
 				A08C2FA01364C2B900C871DF /* SBXMLParser.m in Sources */,
 				A08C2FD81364D09000C871DF /* LasVegasViewController.m in Sources */,
@@ -588,6 +593,7 @@
 				A0D1D29D13A5FECC00F3A3AC /* CJSONDeserializer.m in Sources */,
 				A0D1D29E13A5FECC00F3A3AC /* CJSONScanner.m in Sources */,
 				A0D1D29F13A5FECC00F3A3AC /* CJSONSerializer.m in Sources */,
+				A0100C9513B7B21400BC7F24 /* SBServiceCentral.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "ModalViewLogin.h"
-#import "PlistReader.h"
+#import "SBPlistReader.h"
+
 @class RSSFeed, CampusMap;
 
 @interface LasVegasViewController : UIViewController <ModalViewLoginDelegate> {

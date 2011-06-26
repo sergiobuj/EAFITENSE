@@ -74,7 +74,7 @@ enum {
 	CGFloat viewH = cookingView.frame.size.height;
 	CGFloat buttonYStart = 0.1;
 
-	NSArray *pages = [NSArray arrayWithArray:[PlistReader arrayForResource:@"pages" fromPlist:@"Customization"]];
+	NSArray *pages = [NSArray arrayWithArray:[SBPlistReader arrayForResource:@"pages" fromPlist:@"Customization"]];
 	
 	for ( NSArray * page in pages ) {
 		for (NSDictionary * button in page) {

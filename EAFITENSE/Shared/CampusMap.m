@@ -6,7 +6,7 @@
 //  Copyright 2010 Sergiobuj. All rights reserved.
 //
 
-#import "PlistReader.h"
+#import "SBPlistReader.h"
 #import "CampusMap.h"
 
 
@@ -76,7 +76,7 @@
 
 
 - (void) getMapReady {
-	NSArray * tempArray = [PlistReader arrayForResource:@"map_points" fromPlist:@"Customization"];
+	NSArray * tempArray = [SBPlistReader arrayForResource:@"map_points" fromPlist:@"Customization"];
 
 	for (NSDictionary *site in tempArray) {
 

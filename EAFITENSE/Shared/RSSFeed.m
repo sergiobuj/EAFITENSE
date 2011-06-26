@@ -6,7 +6,7 @@
 //  Copyright 2010 Sergiobuj. All rights reserved.
 //
 
-#import "PlistReader.h"
+#import "SBPlistReader.h"
 #import "SBXMLParser.h"
 #import "RSSFeed.h"
 
@@ -56,7 +56,7 @@
 	
 	if (urlFeed == nil) {
 		
-		NSString *plistUrl =  [[PlistReader dictionaryForResource:@"rss_feeds" fromPlist:@"Customization"] objectForKey: NSStringFromClass([self class]) ];
+		NSString *plistUrl =  [[SBPlistReader dictionaryForResource:@"rss_feeds" fromPlist:@"Customization"] objectForKey: NSStringFromClass([self class]) ];
 				
 		urlFeed = [[NSString alloc] initWithString:plistUrl];
 	}

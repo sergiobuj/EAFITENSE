@@ -397,5 +397,7 @@
 		<key>RSSFeed</key>
 		<string>http://docentes.eafit.edu.co/noticias.rss</string>
 	</dict>
+	<key>grades-service</key>
+	<string>http://mela.local:3000/services/grades</string>
 </dict>
 </plist>

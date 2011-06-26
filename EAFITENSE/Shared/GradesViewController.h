@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SBServiceCentral.h"
 
-@interface GradesViewController : UITableViewController
+@interface GradesViewController : UITableViewController <SBServiceCentralDelegate>
 {
-	NSArray * dataArray;
+	NSMutableArray * dataArray;
 }
 
-@property (atomic, retain) NSArray * dataArray;
+@property (nonatomic, retain) NSMutableArray * dataArray;
 
 @end

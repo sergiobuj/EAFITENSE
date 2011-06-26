@@ -7,7 +7,6 @@
 //
 
 #import "GradesViewController.h"
-#import "CJSONDeserializer.h"
 
 @implementation GradesViewController
 
@@ -22,30 +21,10 @@
 {
     self = [super initWithStyle:style];
     if (self) {
+		
+		dataArray = [[NSMutableArray alloc]init];
         // Custom initialization
-		
-		//		NSThread * currentThread = [NSThread currentThread];
-		
-		[[NSOperationQueue mainQueue] addOperationWithBlock:^{
-			NSError * error = nil;
-			NSString * resourceAsString = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://localhost:3000/services/grades"] encoding:NSUTF8StringEncoding error:&error];
-
-			if (error) {
-				NSLog(@"%@", error);
-			}else {
-				NSData * jsonData = [resourceAsString dataUsingEncoding:NSUTF32BigEndianStringEncoding];
-				dataArray = [[CJSONDeserializer deserializer] deserialize:jsonData error:&error];
-				//[self.tableView performSelector:@selector(reloadData) onThread:currentThread withObject:nil waitUntilDone:YES];
-			
-				[self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
-				
-				//for(NSDictionary * key in dataArray){
-				//	NSLog(@"obj:%@",[key objectForKey:@"title"]);
-				//}
-
-			}
-		}];
-    }
+		    }
     return self;
 }
 
@@ -80,6 +59,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+	[SBServiceCentral fetchResource:SBServiceCentralGrades withTarget:self];
+	
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -99,41 +80,90 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
+	return YES;
     // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+	// return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
-    return [dataArray count];
+	
+	if (dataArray) {
+		return [dataArray count];
+	}
+	
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 1;
+    if (dataArray) {
+		// Return number of grades already assigned plus one to show the needed grade to pass
+		return [[[dataArray objectAtIndex:section] objectForKey:@"current_grades"] count] + 1;
+	}
+	return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    
+	
+	NSDictionary * course = [dataArray objectAtIndex:indexPath.section];
+	NSArray * currentGrades = [course objectForKey:@"current_grades"];
+	
+	
+    static NSString *CellIdentifier = @"GradeCell";
+    if(indexPath.row > [currentGrades count]) CellIdentifier = @"NeededCell";
+	
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
-    
-    // Configure the cell...
+	
+	if (indexPath.row < [currentGrades count] && [CellIdentifier isEqualToString:@"GradeCell"]) {
+		[cell.textLabel setText:[[currentGrades objectAtIndex:indexPath.row] objectAtIndex:0]];
+		[[cell detailTextLabel] setText:[NSString stringWithFormat:@"%d%%",[[[currentGrades objectAtIndex:indexPath.row] objectAtIndex:2]intValue]]];
+		UILabel * markLabel = [[UILabel alloc] init];
+		[markLabel setText:[NSString stringWithFormat:@"%.2f",[[[currentGrades objectAtIndex:indexPath.row] objectAtIndex:1] floatValue]]];
+		[markLabel sizeToFit];
+		[cell setAccessoryView:markLabel];
+
+	}else{
+		
+		float totalPercentage = 0;
+		float gradeXpercetnage = 0;
+		float gradeToPass = [[course objectForKey:@"grade_to_pass"] floatValue];
+		float gradeNeeded = 0;
+		
+		for (id singleGrade in currentGrades) {
+			totalPercentage += [[singleGrade objectAtIndex:2] floatValue];
+			gradeXpercetnage += ([[singleGrade objectAtIndex:2] floatValue] /100)* [[singleGrade objectAtIndex:1] floatValue];
+		}
+
+		gradeNeeded = (gradeToPass - gradeXpercetnage)/(1 - (totalPercentage)/100);
+		
+		///	NSLog(@"totPer %f  graXper %f  graPass %f  gradeNeeded %f", totalPercentage, gradeXpercetnage, gradeToPass, gradeNeeded);
+		
+		[cell.textLabel setText:[NSString stringWithFormat:NSLocalizedString(@"grade_needed_title", @"title for grade needed cell"),gradeToPass]];
+		[cell.detailTextLabel setText:[NSString stringWithFormat:NSLocalizedString(@"percentage_left_with_int", @"needs %d to show percentage left"), (int)(100 - totalPercentage) ]];
+		UILabel * markLabel = [[UILabel alloc] init];
+		[markLabel setText:[NSString stringWithFormat:@"%.2f", gradeNeeded]];
+		[markLabel sizeToFit];
+		[cell setAccessoryView:markLabel];
+	}
+
     [cell setUserInteractionEnabled:NO];
 	return cell;
 }
 
 - (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-	return [[dataArray objectAtIndex:section] objectForKey:@"title"];
-
+	//return [[dataArray objectAtIndex:section] objectForKey:@"title"];
+	if ([dataArray count] > 0) {
+		return [[dataArray objectAtIndex:section] objectForKey:@"title"];
+	}
+	return [NSString stringWithFormat:NSLocalizedString(@"loading_grades", @"when grades haven't arrived")];
 }
 
 /*
@@ -197,5 +227,14 @@
 	}
 }
  */
+
+
+- (void) finishedLoadingGrades:(NSArray *)grades {
+	[dataArray setArray:grades];
+	[[self tableView] reloadData];
+
+	//	NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+
 
 @end
