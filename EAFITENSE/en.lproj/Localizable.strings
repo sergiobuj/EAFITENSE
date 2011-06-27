@@ -25,6 +25,7 @@
 "percentage_left_with_int" = "Percentage left %d%%";
 "grade_needed_title" = "Grade needed to pass (%.1f)";
 
+
 /* */
 "schedule_title"="Class schedule";
 "class_credits_title"="Number of credits";

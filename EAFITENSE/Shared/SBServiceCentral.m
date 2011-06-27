@@ -14,6 +14,10 @@
 
 + (void) fetchResource:(int)resource withTarget:(id) delegate {
 	
+	NSOperationQueue * opQueue;
+	opQueue = [[NSOperationQueue alloc] init];
+	[opQueue setMaxConcurrentOperationCount:1];
+	
 	id data = nil;
 	NSString * serviceURL = nil;
 	switch (resource) {
@@ -32,7 +36,7 @@
 			break;
 	}
 	
-	[[NSOperationQueue mainQueue] addOperationWithBlock:^{
+	[opQueue addOperationWithBlock:^{
 		NSError * error = nil;
 		NSString * resourceAsString = [NSString stringWithContentsOfURL:[NSURL URLWithString:[SBPlistReader valueForResource:serviceURL fromPlist:@"Customization"]] encoding:NSUTF8StringEncoding error:&error];
 		if (error) {
@@ -58,30 +62,30 @@
 		switch (resource) {
 			case SBServiceCentralExams:
 				if ([delegate respondsToSelector:@selector(finishedLoadingExams:)]) {
-					[delegate finishedLoadingExams:data];
+					[delegate performSelectorOnMainThread:@selector(finishedLoadingExams:) withObject:data waitUntilDone:NO];
 				}
 				break;
 				
 			case SBServiceCentralGrades:
 				if ([delegate respondsToSelector:@selector(finishedLoadingGrades:)]) {
-					[delegate finishedLoadingGrades:data];
+					[delegate performSelectorOnMainThread:@selector(finishedLoadingGrades:) withObject:data waitUntilDone:NO];
 				}
 				break;
 				
 			case SBServiceCentralSchedule:
 				if ([delegate respondsToSelector:@selector(finishedLoadingSchedule:)]) {
-					[delegate finishedLoadingSchedule:data];
+					[delegate performSelectorOnMainThread:@selector(finishedLoadingSchedule:) withObject:data waitUntilDone:NO];
 				}
 				break;
 				
 			case SBServiceCentralGPA:
 				if ([delegate respondsToSelector:@selector(finishedLoadingGPA:)]) {
-					[delegate finishedLoadingGPA:data];
+					[delegate performSelectorOnMainThread:@selector(finishedLoadingGPA:) withObject:data waitUntilDone:NO];
 				}
 				break;
 		}
 
-	}];
+		}];
 }
 
 @end

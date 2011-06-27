@@ -47,12 +47,9 @@
 
 #pragma mark - View lifecycle
 
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
+- (void) viewDidLoad {
+	[super viewDidLoad];
 	[SBServiceCentral fetchResource:SBServiceCentralSchedule withTarget:self];
-	
 }
 
 
@@ -66,7 +63,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 	
-	if (dataArray) {
+	if ([dataArray count] > 0) {
 		return [dataArray count];
 	}
 	
@@ -76,7 +73,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    if (dataArray) {
+    if ([dataArray count] > 0) {
 		// Return number of grades already assigned plus one to show the needed grade to pass
 		return [[[dataArray objectAtIndex:section] objectForKey:@"days"] count] + SCHEDULE_ADITIONAL_FIELDS;
 	}
@@ -149,7 +146,7 @@
 	if ([dataArray count] > 0) {
 		return [[dataArray objectAtIndex:section] objectForKey:@"title"];
 	}
-	return [NSString stringWithFormat:NSLocalizedString(@"loading_grades", @"when grades haven't arrived")];
+	return [NSString stringWithFormat:NSLocalizedString(@"loading", @"when grades haven't arrived")];
 }
 
 
@@ -158,7 +155,6 @@
 - (void) finishedLoadingSchedule:(NSArray *)schedule {
 	[dataArray setArray:schedule];
 	[[self tableView] reloadData];
-	
 }
 
 

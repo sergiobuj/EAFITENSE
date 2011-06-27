@@ -12,6 +12,7 @@
 @interface GradesViewController : UITableViewController <SBServiceCentralDelegate>
 {
 	NSMutableArray * dataArray;
+	//	NSOperationQueue * opQueue;
 }
 
 @property (nonatomic, retain) NSMutableArray * dataArray;

@@ -17,6 +17,8 @@
 "pull_down_to_refresh" = "Arrastrar para recargar...";
 "loading" = "Cargando...";
 
+"loading_info"="Cargando información...";
+
 /* */
 "exams_title" = "Evaluaciones";
 

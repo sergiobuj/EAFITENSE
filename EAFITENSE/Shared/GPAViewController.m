@@ -24,7 +24,6 @@
     if (self) {
         // Custom initialization
 		dataDictionary = [[NSMutableDictionary alloc] init];
-		[[self tableView] setScrollEnabled:NO];
     }
     return self;
 }
@@ -36,9 +35,9 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
+- (void) viewDidLoad {
+	[super viewDidLoad];
+	[[self tableView] setScrollEnabled:NO];
 	[SBServiceCentral fetchResource:SBServiceCentralGPA withTarget:self];
 }
 
@@ -120,8 +119,10 @@
 }
 
 - (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-
-return NSLocalizedString(@"student_gpa_info_title", @"title for student information");
+	if ([dataDictionary count] > 0) {
+		return NSLocalizedString(@"student_gpa_info_title", @"title for student information");
+	}
+	return NSLocalizedString(@"loading", @"loading title for student information");
 
 }
 

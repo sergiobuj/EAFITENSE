@@ -21,10 +21,9 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-		
-		dataArray = [[NSMutableArray alloc]init];
-        // Custom initialization
-		    }
+		// Custom initialization
+		dataArray = [[NSMutableArray alloc] init];
+	}
     return self;
 }
 
@@ -39,11 +38,10 @@
 #pragma mark - View lifecycle
 
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-	[SBServiceCentral fetchResource:SBServiceCentralGrades withTarget:self];
+- (void) viewDidLoad {
+	[super viewDidLoad];
 	
+	[SBServiceCentral fetchResource:SBServiceCentralGrades withTarget:self];
 }
 
 
@@ -56,27 +54,31 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+
 	
-	if (dataArray) {
+	if ([dataArray count] > 0) {
 		return [dataArray count];
 	}
-	
+
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    if (dataArray) {
+	
+	
+	// Return the number of rows in the section.
+    if ([dataArray count] > 0) {
 		// Return number of grades already assigned plus one to show the needed grade to pass
 		return [[[dataArray objectAtIndex:section] objectForKey:@"current_grades"] count] + 1;
 	}
+
 	return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	
+
 	NSDictionary * course = [dataArray objectAtIndex:indexPath.section];
 	NSArray * currentGrades = [course objectForKey:@"current_grades"];
 	
@@ -125,11 +127,10 @@
 }
 
 - (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-	//return [[dataArray objectAtIndex:section] objectForKey:@"title"];
 	if ([dataArray count] > 0) {
 		return [[dataArray objectAtIndex:section] objectForKey:@"title"];
 	}
-	return [NSString stringWithFormat:NSLocalizedString(@"loading_grades", @"when grades haven't arrived")];
+	return [NSString stringWithFormat:NSLocalizedString(@"loading", @"when grades haven't arrived")];
 }
 
 
@@ -139,8 +140,7 @@
 
 - (void) finishedLoadingGrades:(NSArray *)grades {
 	[dataArray setArray:grades];
-	[[self tableView] reloadData];
-
+	[[self tableView ] reloadData];
 }
 
 

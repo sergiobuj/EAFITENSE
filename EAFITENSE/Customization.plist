@@ -5,9 +5,9 @@
 	<key>exams-service</key>
 	<string>http://eafitws.heroku.com/service/exams</string>
 	<key>gpa-service</key>
-	<string>http://eafitws.heroku.com/service/gpa_student</string>
+	<string>http://eafitws.cloudfoundry.com/service/gpa_student</string>
 	<key>grades-service</key>
-	<string>http://eafitws.heroku.com/service/grades</string>
+	<string>http://eafitws.cloudfoundry.com/service/grades</string>
 	<key>map_points</key>
 	<array>
 		<dict>

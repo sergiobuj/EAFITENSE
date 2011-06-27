@@ -1,8 +1,9 @@
+# encoding: UTF-8
 class ServiceController < ApplicationController
   def schedule
     render :json => '[
         {
-            "title": "calculo 2",
+            "title": "Cálculo 2",
             "credits": 3,
             "group": 2,
             "start_date": "01/02/2011",
@@ -15,7 +16,7 @@ class ServiceController < ApplicationController
                     "end_hour": "1100"
                 },
                 {
-                    "day": "Miercoles",
+                    "day": "Miércoles",
                     "number": "33-201",
                     "start_hour": "1000",
                     "end_hour": "1100"
@@ -36,7 +37,7 @@ class ServiceController < ApplicationController
             "end_date": "20/05/2011",
             "days": [
                 {
-                    "day": "Miercoles",
+                    "day": "Miércoles",
                     "number": "38-101",
                     "start_hour": "1000",
                     "end_hour": "1200"
@@ -120,7 +121,7 @@ class ServiceController < ApplicationController
             ]
         },
         {
-            "title": "Musica",
+            "title": "Música",
             "examinations": [
                 {
                     "name": "Piano",
@@ -128,7 +129,7 @@ class ServiceController < ApplicationController
                     "date": "10/10/2011"
                 },
                 {
-                    "name": "Historia de la musica",
+                    "name": "Historia de la música",
                     "percentage": 15,
                     "date": "10/10/2011"
                 },
@@ -166,7 +167,7 @@ class ServiceController < ApplicationController
             ]
         },
         {
-            "title": "Musica",
+            "title": "Música",
             "grade_to_pass": 3,
             "current_grades": [
                 {
