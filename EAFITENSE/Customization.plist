@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>exams-service</key>
-	<string>http://mela.local:3000/services/exams</string>
+	<string>http://eafitws.heroku.com/service/exams</string>
 	<key>gpa-service</key>
-	<string>http://mela.local:3000/services/gpa</string>
+	<string>http://eafitws.heroku.com/service/gpa_student</string>
 	<key>grades-service</key>
-	<string>http://mela.local:3000/services/grades</string>
+	<string>http://eafitws.heroku.com/service/grades</string>
 	<key>map_points</key>
 	<array>
 		<dict>
@@ -440,6 +440,6 @@
 		<string>http://docentes.eafit.edu.co/noticias.rss</string>
 	</dict>
 	<key>schedule-service</key>
-	<string>http://mela.local:3000/services/schedule</string>
+	<string>http://eafitws.heroku.com/service/schedule</string>
 </dict>
 </plist>
