@@ -37,6 +37,7 @@
 	}
 	
 	[opQueue addOperationWithBlock:^{
+		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 		NSError * error = nil;
 		NSString * resourceAsString = [NSString stringWithContentsOfURL:[NSURL URLWithString:[SBPlistReader valueForResource:serviceURL fromPlist:@"Customization"]] encoding:NSUTF8StringEncoding error:&error];
 		if (error) {
@@ -84,7 +85,7 @@
 				}
 				break;
 		}
-
+		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 		}];
 }
 

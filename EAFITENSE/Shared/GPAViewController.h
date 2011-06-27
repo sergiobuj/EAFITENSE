@@ -11,7 +11,10 @@
 
 @interface GPAViewController : UITableViewController <SBServiceCentralDelegate>{
     NSMutableDictionary * dataDictionary; 
+	UIActivityIndicatorView * spinner;
 }
 
 @property (nonatomic, retain) NSMutableDictionary * dataDictionary;
+
+- (void) loadInformation ;
 @end

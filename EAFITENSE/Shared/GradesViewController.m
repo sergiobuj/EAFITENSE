@@ -23,8 +23,16 @@
     if (self) {
 		// Custom initialization
 		dataArray = [[NSMutableArray alloc] init];
+		spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
 	}
     return self;
+}
+
+- (void)dealloc
+{
+	[spinner release];
+	[dataArray release];
+    [super dealloc];
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,9 +48,23 @@
 
 - (void) viewDidLoad {
 	[super viewDidLoad];
-	
-	[SBServiceCentral fetchResource:SBServiceCentralGrades withTarget:self];
+	[self loadInformation];
 }
+
+- (void) loadInformation {	
+	[SBServiceCentral fetchResource:SBServiceCentralGrades withTarget:self];
+	UIBarButtonItem * spinnerBar = [[UIBarButtonItem alloc] initWithCustomView:spinner];
+	[self.navigationItem setRightBarButtonItem:spinnerBar];
+	[spinnerBar release];
+	[spinner startAnimating];
+}
+
+- (void) showRefreshbutton {
+	UIBarButtonItem * refreshBar = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(loadInformation)];
+	[self.navigationItem setRightBarButtonItem:refreshBar];
+	[refreshBar release];
+}
+
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -141,6 +163,8 @@
 - (void) finishedLoadingGrades:(NSArray *)grades {
 	[dataArray setArray:grades];
 	[[self tableView ] reloadData];
+	[spinner stopAnimating];
+	[self showRefreshbutton];
 }
 
 

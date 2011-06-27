@@ -12,9 +12,9 @@
 @interface GradesViewController : UITableViewController <SBServiceCentralDelegate>
 {
 	NSMutableArray * dataArray;
-	//	NSOperationQueue * opQueue;
+	UIActivityIndicatorView * spinner;
 }
 
 @property (nonatomic, retain) NSMutableArray * dataArray;
-
+- (void) loadInformation ;
 @end

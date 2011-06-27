@@ -12,8 +12,9 @@
 @interface ExamsViewController : UITableViewController <SBServiceCentralDelegate>{
     
 	NSMutableArray * dataArray;
+	UIActivityIndicatorView * spinner;
 }
 
 @property (nonatomic, retain) NSMutableArray * dataArray;
-
+- (void) loadInformation ;
 @end

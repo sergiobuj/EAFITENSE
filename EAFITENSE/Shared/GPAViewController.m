@@ -24,12 +24,15 @@
     if (self) {
         // Custom initialization
 		dataDictionary = [[NSMutableDictionary alloc] init];
+		spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     }
     return self;
 }
 
 - (void)dealloc
 {
+	[spinner release];
+	[dataDictionary release];
     [super dealloc];
 }
 
@@ -38,8 +41,23 @@
 - (void) viewDidLoad {
 	[super viewDidLoad];
 	[[self tableView] setScrollEnabled:NO];
-	[SBServiceCentral fetchResource:SBServiceCentralGPA withTarget:self];
+	[self loadInformation];
 }
+
+- (void) loadInformation {	
+	[SBServiceCentral fetchResource:SBServiceCentralGPA withTarget:self];
+	UIBarButtonItem * spinnerBar = [[UIBarButtonItem alloc] initWithCustomView:spinner];
+	[self.navigationItem setRightBarButtonItem:spinnerBar];
+	[spinnerBar release];
+	[spinner startAnimating];
+}
+
+- (void) showRefreshbutton {
+	UIBarButtonItem * refreshBar = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(loadInformation)];
+	[self.navigationItem setRightBarButtonItem:refreshBar];
+	[refreshBar release];
+}
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -129,6 +147,8 @@
 -(void) finishedLoadingGPA:(NSDictionary *)gpaInfo {
 	[dataDictionary setDictionary:gpaInfo];
 	[[self tableView] reloadData];
+	[spinner stopAnimating];
+	[self showRefreshbutton];
 }
 
 @end
