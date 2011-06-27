@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>exams-service</key>
+	<string>http://mela.local:3000/services/exams</string>
+	<key>gpa-service</key>
+	<string>http://mela.local:3000/services/gpa</string>
+	<key>grades-service</key>
+	<string>http://mela.local:3000/services/grades</string>
 	<key>map_points</key>
 	<array>
 		<dict>
@@ -402,6 +408,30 @@
 				<key>viewController</key>
 				<string>ExamsViewController</string>
 			</dict>
+			<dict>
+				<key>can_delete</key>
+				<false/>
+				<key>image</key>
+				<string></string>
+				<key>title</key>
+				<string>schedule_title</string>
+				<key>url</key>
+				<string>tt://grades</string>
+				<key>viewController</key>
+				<string>ScheduleViewController</string>
+			</dict>
+			<dict>
+				<key>can_delete</key>
+				<false/>
+				<key>image</key>
+				<string></string>
+				<key>title</key>
+				<string>gpa_title</string>
+				<key>url</key>
+				<string>tt://grades</string>
+				<key>viewController</key>
+				<string>GPAViewController</string>
+			</dict>
 		</array>
 	</array>
 	<key>rss_feeds</key>
@@ -409,12 +439,6 @@
 		<key>RSSFeed</key>
 		<string>http://docentes.eafit.edu.co/noticias.rss</string>
 	</dict>
-	<key>grades-service</key>
-	<string>http://mela.local:3000/services/grades</string>
-	<key>exams-service</key>
-	<string>http://mela.local:3000/services/exams</string>
-	<key>gpa-service</key>
-	<string>http://mela.local:3000/services/gpa</string>
 	<key>schedule-service</key>
 	<string>http://mela.local:3000/services/schedule</string>
 </dict>

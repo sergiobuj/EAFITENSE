@@ -24,6 +24,7 @@
     if (self) {
         // Custom initialization
 		dataDictionary = [[NSMutableDictionary alloc] init];
+		[[self tableView] setScrollEnabled:NO];
     }
     return self;
 }
@@ -64,12 +65,64 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
     
     // Configure the cell...
+	UILabel * markLabel = [[UILabel alloc] init];
+	switch (indexPath.row) {
+		case 0:
+			
+			[cell.textLabel setText:NSLocalizedString(@"student_id", @"eafit's student id number")];
+			//[cell.detailTextLabel setText:[dataDictionary objectForKey:@"student_id"]];
+			[markLabel setText:[dataDictionary objectForKey:@"student_id"]];
+			[markLabel sizeToFit];
+			[cell setAccessoryView:markLabel];
+			break;
+			
+		case 1:
+			[cell.textLabel setText:NSLocalizedString(@"last_term", @"last term grade average")];
+			[markLabel setText:[NSString stringWithFormat:@"%.2f",[[dataDictionary objectForKey:@"last_term"] floatValue]]];
+			[markLabel sizeToFit];
+			[cell setAccessoryView:markLabel];
+			break;
+			
+		case 2:
+			[cell.textLabel setText:NSLocalizedString(@"whole_degree_average", @"acumulated average of the degree")];
+			[markLabel setText:[NSString stringWithFormat:@"%.2f",[[dataDictionary objectForKey:@"average"] floatValue]]];
+			[markLabel sizeToFit];
+			[cell setAccessoryView:markLabel];
+			
+			break;
+			
+		case 3:
+			[cell.textLabel setText:NSLocalizedString(@"passed_credits", @"passed credits")];
+			[markLabel setText:[NSString stringWithFormat:@"%d",[[dataDictionary objectForKey:@"passed_credits"] intValue]]];
+			[markLabel sizeToFit];
+			[cell setAccessoryView:markLabel];
+			break;
+			
+		case 4:
+			[cell.textLabel setText:NSLocalizedString(@"total_credits", @"total credits")];
+			[markLabel setText:[NSString stringWithFormat:@"%d",[[dataDictionary objectForKey:@"total_credits"] intValue]]];
+			[markLabel sizeToFit];
+			[cell setAccessoryView:markLabel];
+			break;
+			
+		default:
+			break;
+	}
+	[markLabel release];
+	
+	
     [cell setUserInteractionEnabled:NO];
     return cell;
+}
+
+- (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+
+return NSLocalizedString(@"student_gpa_info_title", @"title for student information");
+
 }
 
 -(void) finishedLoadingGPA:(NSDictionary *)gpaInfo {

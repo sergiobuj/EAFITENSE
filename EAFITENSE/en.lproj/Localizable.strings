@@ -10,12 +10,32 @@
 "search_engine_title" = "Google";
 "ulises_title" = "ULISES";
 "ei_title" = "EInteractiva";
-"grades_title" = "Current Grades";
 
+/* */
 "last_updated" = "Last Updated: %@";
 "release_to_refresh" = "Release to refresh...";
 "pull_down_to_refresh" = "Pull down to refresh...";
 "loading" = "Loading...";
 
+/* */
+"exams_title" = "Exams";
+
+/* */
+"grades_title" = "Current Grades";
 "percentage_left_with_int" = "Percentage left %d%%";
 "grade_needed_title" = "Grade needed to pass (%.1f)";
+
+/* */
+"schedule_title"="Class schedule";
+"class_credits_title"="Number of credits";
+"class_group_title"="Group number";
+"class_start_end_dates_title"="Class Dates";
+
+/* */
+"gpa_title" = "Current GPA";
+"student_gpa_info_title"="Current GPA";
+"student_id"="Student ID";
+"last_term"="Last Term Average";
+"whole_degree_average"="GPA";
+"passed_credits"="Credits approved";
+"total_credits"="Total credits";

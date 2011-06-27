@@ -88,16 +88,15 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
 	
-	if (indexPath.row < [currentGrades count] && [CellIdentifier isEqualToString:@"GradeCell"]) {
-		[cell.textLabel setText:[[currentGrades objectAtIndex:indexPath.row] objectForKey:@"name"]];
-		[[cell detailTextLabel] setText:[NSString stringWithFormat:@"%d%%",[[[currentGrades objectAtIndex:indexPath.row] objectForKey:@"date"]intValue]]];
-		UILabel * markLabel = [[UILabel alloc] init];
-		[markLabel setText:[NSString stringWithFormat:@"%.2f",[[[currentGrades objectAtIndex:indexPath.row] objectForKey:@"percentage"] floatValue]]];
-		[markLabel sizeToFit];
-		[cell setAccessoryView:markLabel];
-		[markLabel release];
-	}
-
+	[cell.textLabel setText:[[currentGrades objectAtIndex:indexPath.row] objectForKey:@"name"]];
+	[[cell detailTextLabel] setText:[NSString stringWithFormat:@"%d%%",[[[currentGrades objectAtIndex:indexPath.row] objectForKey:@"date"]intValue]]];
+	UILabel * markLabel = [[UILabel alloc] init];
+	[markLabel setText:[NSString stringWithFormat:@"%.2f",[[[currentGrades objectAtIndex:indexPath.row] objectForKey:@"percentage"] floatValue]]];
+	[markLabel sizeToFit];
+	[cell setAccessoryView:markLabel];
+	[markLabel release];
+	
+	
     [cell setUserInteractionEnabled:NO];
 	return cell;
 }

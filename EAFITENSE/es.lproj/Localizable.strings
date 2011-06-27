@@ -11,7 +11,31 @@
 "ulises_title" = "ULISES";
 "ei_title" = "EInteractiva";
 
+/* */
 "last_updated" = "Última actualización: %@";
 "release_to_refresh" = "Soltar para recargar...";
 "pull_down_to_refresh" = "Arrastrar para recargar...";
 "loading" = "Cargando...";
+
+/* */
+"exams_title" = "Evaluaciones";
+
+/* */
+"grades_title" = "Notas Semestre";
+"percentage_left_with_int" = "Porcentaje restante %d%%";
+"grade_needed_title" = "Nota para pasar (%.1f)";
+
+/* */
+"schedule_title"="Horario de clases";
+"class_credits_title"="Número de créditos";
+"class_group_title"="Grupo #";
+"class_start_end_dates_title"="Fechas de clase";
+
+/* */
+"gpa_title" = "Promedio actual";
+"student_gpa_info_title"="Promedio actual";
+"student_id"="Código estudiante";
+"last_term"="Promedio semestre pasado";
+"whole_degree_average"="Promedio acumulado";
+"passed_credits"="Créditos aprobados";
+"total_credits"="Créditos totales";
