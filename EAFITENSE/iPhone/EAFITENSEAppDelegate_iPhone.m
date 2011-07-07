@@ -20,7 +20,7 @@
 	mainEntrance = [[UINavigationController alloc] initWithRootViewController:viewController];
 	
 	[[mainEntrance navigationBar] setTintColor:[UIColor blueEAFIT]];
-	[self.window addSubview:mainEntrance.view];
+	[self.window addSubview: mainEntrance.view];
 
 	[self.window makeKeyAndVisible];
 

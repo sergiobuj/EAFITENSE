@@ -149,7 +149,7 @@ enum {
 
 	[cookingView release];
 	
-	///////[self showModal:self];	
+	[self showModal:self];	
 	
 }
 

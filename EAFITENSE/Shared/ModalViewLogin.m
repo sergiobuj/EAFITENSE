@@ -69,7 +69,7 @@
 	UIBarButtonItem *cancelB = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelButton)];
 	UIBarButtonItem *sendB = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(login)];
 	
-	//self.navigationItem.rightBarButtonItem = sendB;
+	self.navigationItem.rightBarButtonItem = sendB;
 	self.navigationItem.leftBarButtonItem = cancelB;
 	
 	[sendB release];
