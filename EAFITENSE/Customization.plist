@@ -2,12 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>exams-service</key>
-	<string>http://eafitws.heroku.com/service/exams</string>
-	<key>gpa-service</key>
-	<string>http://eafitws.cloudfoundry.com/service/gpa_student</string>
-	<key>grades-service</key>
-	<string>http://eafitws.cloudfoundry.com/service/grades</string>
 	<key>map_points</key>
 	<array>
 		<dict>
@@ -331,8 +325,6 @@
 			<string>Pawa</string>
 		</dict>
 	</array>
-	<key>num_of_cols</key>
-	<integer>3</integer>
 	<key>pages</key>
 	<array>
 		<array>
@@ -439,7 +431,16 @@
 		<key>RSSFeed</key>
 		<string>http://docentes.eafit.edu.co/noticias.rss</string>
 	</dict>
-	<key>schedule-service</key>
-	<string>http://eafitws.heroku.com/service/schedule</string>
+	<key>services</key>
+	<dict>
+		<key>grades-service</key>
+		<string>http://eafitws.cloudfoundry.com/service/grades</string>
+		<key>gpa-service</key>
+		<string>http://eafitws.cloudfoundry.com/service/gpa_student</string>
+		<key>schedule-service</key>
+		<string>http://eafitws.heroku.com/service/schedule</string>
+		<key>exams-service</key>
+		<string>http://eafitws.heroku.com/service/exams</string>
+	</dict>
 </dict>
 </plist>
