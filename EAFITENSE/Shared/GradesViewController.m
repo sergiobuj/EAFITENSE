@@ -24,6 +24,9 @@
 		// Custom initialization
 		dataArray = [[NSMutableArray alloc] init];
 		spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+		//	[self.tableView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"icon.png"]]];
+		//	[self.tableView setSeparatorColor:[UIColor clearColor]];
+		//  [self.view setBackgroundColor:[UIColor clearColor]];
 	}
     return self;
 }
@@ -142,6 +145,7 @@
 		[markLabel setText:[NSString stringWithFormat:@"%.2f", gradeNeeded]];
 		[markLabel sizeToFit];
 		[cell setAccessoryView:markLabel];
+		[markLabel release];
 	}
 
     [cell setUserInteractionEnabled:NO];

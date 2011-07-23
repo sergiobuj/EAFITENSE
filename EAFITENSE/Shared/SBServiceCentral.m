@@ -86,7 +86,10 @@
 				break;
 		}
 		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-		}];
+
+		[data autorelease];
+	}];
+	[opQueue autorelease];
 }
 
 @end

@@ -354,11 +354,11 @@
 				<key>image</key>
 				<string>eafit.png</string>
 				<key>title</key>
-				<string>ulises_title</string>
+				<string>campus_emergency</string>
 				<key>url</key>
-				<string>http://www.eafit.edu.co/ulises</string>
+				<string></string>
 				<key>viewController</key>
-				<string>donke</string>
+				<string></string>
 			</dict>
 			<dict>
 				<key>can_delete</key>
@@ -432,12 +432,24 @@
 				<key>viewController</key>
 				<string>GPAViewController</string>
 			</dict>
+			<dict>
+				<key>can_delete</key>
+				<false/>
+				<key>image</key>
+				<string></string>
+				<key>title</key>
+				<string>campus_report</string>
+				<key>url</key>
+				<string></string>
+				<key>viewController</key>
+				<string></string>
+			</dict>
 		</array>
 	</array>
 	<key>rss_feeds</key>
 	<dict>
 		<key>RSSFeed</key>
-		<string>http://docentes.eafit.edu.co/noticias.rss</string>
+		<string></string>
 	</dict>
 	<key>schedule-service</key>
 	<string>http://eafitws.heroku.com/service/schedule</string>
