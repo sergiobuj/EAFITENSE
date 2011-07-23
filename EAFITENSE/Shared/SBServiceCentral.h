@@ -10,6 +10,8 @@
 #import "CJSONDeserializer.h"
 #import "SBPlistReader.h"
 
+/* Protocol definition */
+
 @protocol SBServiceCentralDelegate <NSObject>
 
 extern enum{

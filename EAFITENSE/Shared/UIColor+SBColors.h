@@ -11,5 +11,8 @@
 @interface UIColor (SBColors)
 
 + (UIColor *) blueEAFIT;
-
++ (UIColor *) goldEAFIT;
++ (UIColor *) blueP50;
++ (UIColor *) yellowP50;
++ (UIColor *) redP50;
 @end

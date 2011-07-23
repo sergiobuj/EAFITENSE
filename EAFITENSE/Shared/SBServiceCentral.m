@@ -39,7 +39,8 @@
 	[opQueue addOperationWithBlock:^{
 		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 		NSError * error = nil;
-		NSString * resourceAsString = [NSString stringWithContentsOfURL:[NSURL URLWithString:[SBPlistReader valueForResource:serviceURL fromPlist:@"Customization"]] encoding:NSUTF8StringEncoding error:&error];
+		NSDictionary * services = [SBPlistReader dictionaryForResource:@"services" fromPlist:@"Customization"];
+		NSString * resourceAsString = [NSString stringWithContentsOfURL:[NSURL URLWithString:[services objectForKey:serviceURL]] encoding:NSUTF8StringEncoding error:&error];
 		if (error) {
 			NSLog(@"%@", error);
 		}else {

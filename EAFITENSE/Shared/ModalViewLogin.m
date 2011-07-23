@@ -69,7 +69,10 @@
 	UIBarButtonItem *cancelB = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelButton)];
 	UIBarButtonItem *sendB = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(login)];
 	
-	//self.navigationItem.rightBarButtonItem = sendB;
+	self.navigationItem.rightBarButtonItem = sendB;
+	
+	
+#warning Remove Cancel Button (no login bypass)
 	self.navigationItem.leftBarButtonItem = cancelB;
 	
 	[sendB release];
