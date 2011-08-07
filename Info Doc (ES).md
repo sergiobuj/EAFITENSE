@@ -23,8 +23,7 @@ pages			Arreglo de arreglos de diccionarios. Cada arreglo contiene los elementos
 				Las llaves principales son 'title'* y 'viewController'.
 
 				* Todos los títulos y textos son localizados. Los títulos de los botones se deben especificar con la llave del archivo
-				de localización correspondiente al texto del botón.
-
+				de localización correspondiente al texto del botón (ver archivos '.strings').
 
 
 Para hacer uso del los servicios establecidos en el arreglo 'services' en el archivo 'Customization.plist' el controlador de la vista
